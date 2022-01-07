@@ -1510,9 +1510,9 @@ func flattenSingleFrontDoorBackendPools(input *frontdoors.BackendPool, frontDoor
 	}
 
 	output := map[string]interface{}{
-		"backend":             backend,
-		"health_probe_name":   healthProbeName,
-		"id":                  id,
+		"backend":           backend,
+		"health_probe_name": healthProbeName,
+		"id":                id,
 		"load_balancing_name": loadBalancingName,
 		"name":                name,
 	}
@@ -1720,11 +1720,11 @@ func flattenSingleFrontEndEndpoints(input frontdoors.FrontendEndpoint, frontDoor
 	output := map[string]interface{}{
 		// "custom_https_configuration":        customHTTPSConfiguration,
 		// "custom_https_provisioning_enabled": customHttpsProvisioningEnabled,
-		"host_name":                    hostName,
-		"id":                           id,
-		"name":                         name,
-		"session_affinity_enabled":     sessionAffinityEnabled,
-		"session_affinity_ttl_seconds": sessionAffinityTlsSeconds,
+		"host_name": hostName,
+		"id":        id,
+		"name":      name,
+		"session_affinity_enabled":                sessionAffinityEnabled,
+		"session_affinity_ttl_seconds":            sessionAffinityTlsSeconds,
 		"web_application_firewall_policy_link_id": webApplicationFirewallPolicyLinkId,
 	}
 
@@ -1922,10 +1922,10 @@ func flattenSingleFrontDoorLoadBalancingSettingsModel(input *frontdoors.LoadBala
 
 	output := map[string]interface{}{
 		"additional_latency_milliseconds": additionalLatencyMilliseconds,
-		"id":                              id,
-		"name":                            name,
-		"sample_size":                     sampleSize,
-		"successful_samples_required":     successfulSamplesRequired,
+		"id":                          id,
+		"name":                        name,
+		"sample_size":                 sampleSize,
+		"successful_samples_required": successfulSamplesRequired,
 	}
 
 	return output

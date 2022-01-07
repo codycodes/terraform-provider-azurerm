@@ -898,7 +898,7 @@ func expandNetworkRuleSet(profiles []interface{}) *containerregistry.NetworkRule
 	for _, networkRuleInterface := range networkRuleConfigs {
 		config := networkRuleInterface.(map[string]interface{})
 		newVirtualNetworkRule := containerregistry.VirtualNetworkRule{
-			Action:                   containerregistry.Action(config["action"].(string)),
+			Action: containerregistry.Action(config["action"].(string)),
 			VirtualNetworkResourceID: utils.String(config["subnet_id"].(string)),
 		}
 		virtualNetworkRules = append(virtualNetworkRules, newVirtualNetworkRule)

@@ -21,7 +21,7 @@ func NewFrontendIPConfigurationID(subscriptionId, resourceGroup, applicationGate
 		SubscriptionId:         subscriptionId,
 		ResourceGroup:          resourceGroup,
 		ApplicationGatewayName: applicationGatewayName,
-		Name:                   name,
+		Name: name,
 	}
 }
 

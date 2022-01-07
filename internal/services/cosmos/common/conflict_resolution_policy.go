@@ -44,7 +44,7 @@ func FlattenCosmosDbConflictResolutionPolicy(input *documentdb.ConflictResolutio
 
 	return []interface{}{
 		map[string]interface{}{
-			"mode":                          string(input.Mode),
+			"mode": string(input.Mode),
 			"conflict_resolution_path":      path,
 			"conflict_resolution_procedure": procedure,
 		},

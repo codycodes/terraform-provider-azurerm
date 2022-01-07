@@ -502,7 +502,7 @@ func expandApiManagementBackendServiceFabricClusterServerX509Names(input []inter
 		v := certificateName.(map[string]interface{})
 		result := apimanagement.X509CertificateName{
 			IssuerCertificateThumbprint: utils.String(v["issuer_certificate_thumbprint"].(string)),
-			Name:                        utils.String(v["name"].(string)),
+			Name: utils.String(v["name"].(string)),
 		}
 		results = append(results, result)
 	}

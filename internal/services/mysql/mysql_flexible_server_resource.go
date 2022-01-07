@@ -875,7 +875,7 @@ func flattenFlexibleServerHighAvailability(ha *mysqlflexibleservers.HighAvailabi
 
 	return []interface{}{
 		map[string]interface{}{
-			"mode":                      string(ha.Mode),
+			"mode": string(ha.Mode),
 			"standby_availability_zone": zone,
 		},
 	}

@@ -17,8 +17,8 @@ type WebApplicationFirewallPolicyId struct {
 
 func NewWebApplicationFirewallPolicyID(subscriptionId, resourceGroup, frontDoorWebApplicationFirewallPolicyName string) WebApplicationFirewallPolicyId {
 	return WebApplicationFirewallPolicyId{
-		SubscriptionId: subscriptionId,
-		ResourceGroup:  resourceGroup,
+		SubscriptionId:                            subscriptionId,
+		ResourceGroup:                             resourceGroup,
 		FrontDoorWebApplicationFirewallPolicyName: frontDoorWebApplicationFirewallPolicyName,
 	}
 }

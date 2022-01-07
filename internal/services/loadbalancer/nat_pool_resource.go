@@ -330,7 +330,7 @@ func expandAzureRmLoadBalancerNatPool(d *pluginsdk.ResourceData, lb *network.Loa
 	}
 
 	return &network.InboundNatPool{
-		Name:                           utils.String(d.Get("name").(string)),
+		Name: utils.String(d.Get("name").(string)),
 		InboundNatPoolPropertiesFormat: &properties,
 	}, nil
 }

@@ -124,7 +124,7 @@ func resourceSqlElasticPoolCreateUpdate(d *pluginsdk.ResourceData, meta interfac
 		Name:                  utils.String(id.Name),
 		Location:              &location,
 		ElasticPoolProperties: getArmSqlElasticPoolProperties(d),
-		Tags:                  tags.Expand(t),
+		Tags: tags.Expand(t),
 	}
 
 	future, err := client.CreateOrUpdate(ctx, id.ResourceGroup, id.ServerName, id.Name, elasticPool)

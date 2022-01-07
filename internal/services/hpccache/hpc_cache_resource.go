@@ -908,7 +908,7 @@ func flattenStorageCacheDirectorySettings(d *pluginsdk.ResourceData, input *stor
 				"encrypted":                          connEncrypted,
 				"certificate_validation_uri":         certValidationUri,
 				"download_certificate_automatically": downloadCert,
-				"bind":                               flattenStorageCacheDirectoryLdapBind(d),
+				"bind": flattenStorageCacheDirectoryLdapBind(d),
 			},
 		}, nil
 	default:

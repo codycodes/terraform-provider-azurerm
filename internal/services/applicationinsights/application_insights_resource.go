@@ -222,11 +222,11 @@ func resourceApplicationInsightsCreateUpdate(d *pluginsdk.ResourceData, meta int
 	}
 
 	insightProperties := insights.ApplicationInsightsComponent{
-		Name:                                   &name,
-		Location:                               &location,
-		Kind:                                   &applicationType,
+		Name:     &name,
+		Location: &location,
+		Kind:     &applicationType,
 		ApplicationInsightsComponentProperties: &applicationInsightsComponentProperties,
-		Tags:                                   tags.Expand(t),
+		Tags: tags.Expand(t),
 	}
 
 	_, err := client.CreateOrUpdate(ctx, resGroup, name, insightProperties)

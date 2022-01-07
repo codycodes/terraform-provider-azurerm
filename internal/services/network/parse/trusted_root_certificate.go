@@ -21,7 +21,7 @@ func NewTrustedRootCertificateID(subscriptionId, resourceGroup, applicationGatew
 		SubscriptionId:         subscriptionId,
 		ResourceGroup:          resourceGroup,
 		ApplicationGatewayName: applicationGatewayName,
-		Name:                   name,
+		Name: name,
 	}
 }
 

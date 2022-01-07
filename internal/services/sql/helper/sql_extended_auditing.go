@@ -60,7 +60,7 @@ func ExpandAzureRmSqlServerBlobAuditingPolicies(input []interface{}) *sql.Extend
 	serverBlobAuditingPolicies := input[0].(map[string]interface{})
 
 	ExtendedServerBlobAuditingPolicyProperties := sql.ExtendedServerBlobAuditingPolicyProperties{
-		State:                       sql.BlobAuditingPolicyStateEnabled,
+		State: sql.BlobAuditingPolicyStateEnabled,
 		StorageAccountAccessKey:     utils.String(serverBlobAuditingPolicies["storage_account_access_key"].(string)),
 		StorageEndpoint:             utils.String(serverBlobAuditingPolicies["storage_endpoint"].(string)),
 		IsAzureMonitorTargetEnabled: utils.Bool(serverBlobAuditingPolicies["log_monitoring_enabled"].(bool)),
@@ -121,7 +121,7 @@ func ExpandAzureRmSqlDBBlobAuditingPolicies(input []interface{}) *sql.ExtendedDa
 	dbBlobAuditingPolicies := input[0].(map[string]interface{})
 
 	ExtendedDatabaseBlobAuditingPolicyProperties := sql.ExtendedDatabaseBlobAuditingPolicyProperties{
-		State:                       sql.BlobAuditingPolicyStateEnabled,
+		State: sql.BlobAuditingPolicyStateEnabled,
 		StorageAccountAccessKey:     utils.String(dbBlobAuditingPolicies["storage_account_access_key"].(string)),
 		StorageEndpoint:             utils.String(dbBlobAuditingPolicies["storage_endpoint"].(string)),
 		IsAzureMonitorTargetEnabled: utils.Bool(dbBlobAuditingPolicies["log_monitoring_enabled"].(bool)),

@@ -220,7 +220,7 @@ func resourceDataFactoryLinkedServiceDataLakeStorageGen2CreateUpdate(d *pluginsd
 	datalakeStorageGen2LinkedService := &datafactory.AzureBlobFSLinkedService{
 		Description:                            utils.String(d.Get("description").(string)),
 		AzureBlobFSLinkedServiceTypeProperties: datalakeStorageGen2Properties,
-		Type:                                   datafactory.TypeBasicLinkedServiceTypeAzureBlobFS,
+		Type: datafactory.TypeBasicLinkedServiceTypeAzureBlobFS,
 	}
 
 	if v, ok := d.GetOk("parameters"); ok {

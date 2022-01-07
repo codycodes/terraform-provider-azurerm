@@ -109,8 +109,8 @@ func resourceApplicationInsightsSmartDetectionRuleUpdate(d *pluginsdk.ResourceDa
 	id := parse.NewSmartDetectionRuleID(appInsightsId.SubscriptionId, appInsightsId.ResourceGroup, appInsightsId.Name, name)
 
 	smartDetectionRuleProperties := insights.ApplicationInsightsComponentProactiveDetectionConfiguration{
-		Name:                           &name,
-		Enabled:                        utils.Bool(d.Get("enabled").(bool)),
+		Name:    &name,
+		Enabled: utils.Bool(d.Get("enabled").(bool)),
 		SendEmailsToSubscriptionOwners: utils.Bool(d.Get("send_emails_to_subscription_owners").(bool)),
 		CustomEmails:                   utils.ExpandStringSlice(d.Get("additional_email_recipients").(*pluginsdk.Set).List()),
 	}
@@ -178,8 +178,8 @@ func resourceApplicationInsightsSmartDetectionRuleDelete(d *pluginsdk.ResourceDa
 	}
 
 	smartDetectionRuleProperties := insights.ApplicationInsightsComponentProactiveDetectionConfiguration{
-		Name:                           utils.String(id.SmartDetectionRuleName),
-		Enabled:                        result.RuleDefinitions.IsEnabledByDefault,
+		Name:    utils.String(id.SmartDetectionRuleName),
+		Enabled: result.RuleDefinitions.IsEnabledByDefault,
 		SendEmailsToSubscriptionOwners: result.RuleDefinitions.SupportsEmailNotifications,
 		CustomEmails:                   utils.ExpandStringSlice([]interface{}{}),
 	}

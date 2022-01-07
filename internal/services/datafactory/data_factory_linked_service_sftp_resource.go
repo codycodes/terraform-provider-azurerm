@@ -209,7 +209,7 @@ func resourceDataFactoryLinkedServiceSFTPCreateUpdate(d *pluginsdk.ResourceData,
 	sftpLinkedService := &datafactory.SftpServerLinkedService{
 		Description:                           &description,
 		SftpServerLinkedServiceTypeProperties: sftpProperties,
-		Type:                                  datafactory.TypeBasicLinkedServiceTypeSftp,
+		Type: datafactory.TypeBasicLinkedServiceTypeSftp,
 	}
 
 	if v, ok := d.GetOk("parameters"); ok {

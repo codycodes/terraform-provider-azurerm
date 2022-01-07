@@ -22,8 +22,8 @@ func TestBlobV0ToV1(t *testing.T) {
 		t.Logf("[DEBUG] Testing with Cloud %q", cloud.Name)
 
 		input := map[string]interface{}{
-			"id":                     "old-id",
-			"name":                   "some-name",
+			"id":   "old-id",
+			"name": "some-name",
 			"storage_container_name": "some-container",
 			"storage_account_name":   "some-account",
 		}
@@ -33,8 +33,8 @@ func TestBlobV0ToV1(t *testing.T) {
 			},
 		}
 		expected := map[string]interface{}{
-			"id":                     fmt.Sprintf("https://some-account.blob.%s/some-container/some-name", cloud.StorageEndpointSuffix),
-			"name":                   "some-name",
+			"id":   fmt.Sprintf("https://some-account.blob.%s/some-container/some-name", cloud.StorageEndpointSuffix),
+			"name": "some-name",
 			"storage_container_name": "some-container",
 			"storage_account_name":   "some-account",
 		}

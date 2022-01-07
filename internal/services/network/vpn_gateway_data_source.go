@@ -226,7 +226,7 @@ func dataSourceFlattenVPNGatewayBGPSettings(input *network.BgpSettings) []interf
 
 	return []interface{}{
 		map[string]interface{}{
-			"asn":                            asn,
+			"asn": asn,
 			"bgp_peering_address":            bgpPeeringAddress,
 			"instance_0_bgp_peering_address": instance0BgpPeeringAddress,
 			"instance_1_bgp_peering_address": instance1BgpPeeringAddress,

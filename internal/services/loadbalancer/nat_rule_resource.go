@@ -332,7 +332,7 @@ func expandAzureRmLoadBalancerNatRule(d *pluginsdk.ResourceData, lb *network.Loa
 	}
 
 	natRule := network.InboundNatRule{
-		Name:                           utils.String(d.Get("name").(string)),
+		Name: utils.String(d.Get("name").(string)),
 		InboundNatRulePropertiesFormat: &properties,
 	}
 

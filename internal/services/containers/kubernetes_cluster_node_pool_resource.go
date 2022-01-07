@@ -514,7 +514,7 @@ func resourceKubernetesClusterNodePoolCreate(d *pluginsdk.ResourceData, meta int
 	}
 
 	parameters := containerservice.AgentPool{
-		Name:                                     &name,
+		Name: &name,
 		ManagedClusterAgentPoolProfileProperties: &profile,
 	}
 

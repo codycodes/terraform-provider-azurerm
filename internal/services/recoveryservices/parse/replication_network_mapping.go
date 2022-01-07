@@ -25,7 +25,7 @@ func NewReplicationNetworkMappingID(subscriptionId, resourceGroup, vaultName, re
 		VaultName:              vaultName,
 		ReplicationFabricName:  replicationFabricName,
 		ReplicationNetworkName: replicationNetworkName,
-		Name:                   name,
+		Name: name,
 	}
 }
 

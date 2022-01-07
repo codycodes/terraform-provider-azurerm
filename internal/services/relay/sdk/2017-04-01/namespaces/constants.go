@@ -175,10 +175,10 @@ func PossibleValuesForUnavailableReason() []string {
 
 func parseUnavailableReason(input string) (*UnavailableReason, error) {
 	vals := map[string]UnavailableReason{
-		"invalidname":                           UnavailableReasonInvalidName,
-		"nameinlockdown":                        UnavailableReasonNameInLockdown,
-		"nameinuse":                             UnavailableReasonNameInUse,
-		"none":                                  UnavailableReasonNone,
+		"invalidname":    UnavailableReasonInvalidName,
+		"nameinlockdown": UnavailableReasonNameInLockdown,
+		"nameinuse":      UnavailableReasonNameInUse,
+		"none":           UnavailableReasonNone,
 		"subscriptionisdisabled":                UnavailableReasonSubscriptionIsDisabled,
 		"toomanynamespaceincurrentsubscription": UnavailableReasonTooManyNamespaceInCurrentSubscription,
 	}

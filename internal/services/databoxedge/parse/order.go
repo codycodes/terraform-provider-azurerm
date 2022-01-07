@@ -21,7 +21,7 @@ func NewOrderID(subscriptionId, resourceGroup, dataBoxEdgeDeviceName, name strin
 		SubscriptionId:        subscriptionId,
 		ResourceGroup:         resourceGroup,
 		DataBoxEdgeDeviceName: dataBoxEdgeDeviceName,
-		Name:                  name,
+		Name: name,
 	}
 }
 

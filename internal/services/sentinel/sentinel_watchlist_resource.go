@@ -172,7 +172,7 @@ func (r WatchlistResource) Read() sdk.ResourceFunc {
 			}
 
 			model := WatchlistModel{
-				Name:                    id.Name,
+				Name: id.Name,
 				LogAnalyticsWorkspaceId: loganalyticsParse.NewLogAnalyticsWorkspaceID(id.SubscriptionId, id.ResourceGroup, id.WorkspaceName).ID(),
 			}
 

@@ -112,7 +112,7 @@ func TestReplicationNetworkMappingID(t *testing.T) {
 				VaultName:              "vault1",
 				ReplicationFabricName:  "fabric1",
 				ReplicationNetworkName: "network1",
-				Name:                   "mapping1",
+				Name: "mapping1",
 			},
 		},
 

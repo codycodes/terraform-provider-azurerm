@@ -2375,7 +2375,7 @@ func expandKubernetesClusterManagedClusterIdentity(input []interface{}) *contain
 		}
 
 		return &containerservice.ManagedClusterIdentity{
-			Type:                   containerservice.ResourceIdentityType(values["type"].(string)),
+			Type: containerservice.ResourceIdentityType(values["type"].(string)),
 			UserAssignedIdentities: userAssignedIdentities,
 		}
 	}
@@ -2507,9 +2507,9 @@ func flattenKubernetesClusterKubeConfig(config kubernetes.KubeConfig) []interfac
 			"client_certificate":     user.ClientCertificteData,
 			"client_key":             user.ClientKeyData,
 			"cluster_ca_certificate": cluster.ClusterAuthorityData,
-			"host":                   cluster.Server,
-			"password":               user.Token,
-			"username":               name,
+			"host":     cluster.Server,
+			"password": user.Token,
+			"username": name,
 		},
 	}
 }
@@ -2524,9 +2524,9 @@ func flattenKubernetesClusterKubeConfigAAD(config kubernetes.KubeConfigAAD) []in
 			"client_certificate":     "",
 			"client_key":             "",
 			"cluster_ca_certificate": cluster.ClusterAuthorityData,
-			"host":                   cluster.Server,
-			"password":               "",
-			"username":               name,
+			"host":     cluster.Server,
+			"password": "",
+			"username": name,
 		},
 	}
 }

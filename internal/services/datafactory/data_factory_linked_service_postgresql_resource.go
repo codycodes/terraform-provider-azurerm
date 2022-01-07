@@ -163,7 +163,7 @@ func resourceDataFactoryLinkedServicePostgreSQLCreateUpdate(d *pluginsdk.Resourc
 	postgresqlLinkedService := &datafactory.PostgreSQLLinkedService{
 		Description:                           &description,
 		PostgreSQLLinkedServiceTypeProperties: postgresqlProperties,
-		Type:                                  datafactory.TypeBasicLinkedServiceTypePostgreSQL,
+		Type: datafactory.TypeBasicLinkedServiceTypePostgreSQL,
 	}
 
 	if v, ok := d.GetOk("parameters"); ok {

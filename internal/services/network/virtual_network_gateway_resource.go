@@ -420,9 +420,9 @@ func resourceVirtualNetworkGatewayCreateUpdate(d *pluginsdk.ResourceData, meta i
 	}
 
 	gateway := network.VirtualNetworkGateway{
-		Name:                                  &id.Name,
-		Location:                              &location,
-		Tags:                                  tags.Expand(t),
+		Name:     &id.Name,
+		Location: &location,
+		Tags:     tags.Expand(t),
 		VirtualNetworkGatewayPropertiesFormat: properties,
 	}
 

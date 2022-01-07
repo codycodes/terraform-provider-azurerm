@@ -86,7 +86,7 @@ func TestCertificateID(t *testing.T) {
 				SubscriptionId:        "12345678-1234-9876-4563-123456789012",
 				ResourceGroup:         "group1",
 				AutomationAccountName: "account1",
-				Name:                  "cert1",
+				Name: "cert1",
 			},
 		},
 

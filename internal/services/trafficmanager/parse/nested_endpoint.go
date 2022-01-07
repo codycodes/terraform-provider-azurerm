@@ -21,7 +21,7 @@ func NewNestedEndpointID(subscriptionId, resourceGroup, trafficManagerProfileNam
 		SubscriptionId:            subscriptionId,
 		ResourceGroup:             resourceGroup,
 		TrafficManagerProfileName: trafficManagerProfileName,
-		Name:                      name,
+		Name: name,
 	}
 }
 

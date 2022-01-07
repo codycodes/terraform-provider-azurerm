@@ -21,7 +21,7 @@ func (u UserAssigned) Expand(input []interface{}) (*ExpandedConfig, error) {
 	v := input[0].(map[string]interface{})
 
 	return &ExpandedConfig{
-		Type:                    userAssigned,
+		Type: userAssigned,
 		UserAssignedIdentityIds: *utils.ExpandStringSlice(v["identity_ids"].(*pluginsdk.Set).List()),
 	}, nil
 }

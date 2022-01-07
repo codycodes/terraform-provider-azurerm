@@ -436,7 +436,7 @@ func waitForSubscriptionStateToSettle(ctx context.Context, clients *clients.Clie
 		PollInterval:              20 * time.Second,
 		Timeout:                   timeout,
 		ContinuousTargetOccurence: 2,
-		Delay:                     60 * time.Second,
+		Delay: 60 * time.Second,
 	}
 	switch targetState {
 	case "Cancelled":

@@ -412,7 +412,7 @@ func resourceDataFactoryLinkedServiceDatabricksCreateUpdate(d *pluginsdk.Resourc
 	}
 
 	databricksLinkedService := &datafactory.AzureDatabricksLinkedService{
-		Description: utils.String(d.Get("description").(string)),
+		Description:                                utils.String(d.Get("description").(string)),
 		AzureDatabricksLinkedServiceTypeProperties: databricksProperties,
 		Type: datafactory.TypeBasicLinkedServiceTypeAzureDatabricks,
 	}

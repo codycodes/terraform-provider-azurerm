@@ -112,7 +112,7 @@ func TestProtectedItemID(t *testing.T) {
 				VaultName:               "vault1",
 				BackupFabricName:        "Azure",
 				ProtectionContainerName: "container1",
-				Name:                    "protectedItem1",
+				Name: "protectedItem1",
 			},
 		},
 

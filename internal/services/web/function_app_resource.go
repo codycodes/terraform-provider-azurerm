@@ -400,7 +400,7 @@ func resourceFunctionAppCreate(d *pluginsdk.ResourceData, meta interface{}) erro
 	authSettings := expandAppServiceAuthSettings(authSettingsRaw)
 
 	auth := web.SiteAuthSettings{
-		ID:                         read.ID,
+		ID: read.ID,
 		SiteAuthSettingsProperties: &authSettings,
 	}
 
@@ -571,7 +571,7 @@ func resourceFunctionAppUpdate(d *pluginsdk.ResourceData, meta interface{}) erro
 		authSettingsRaw := d.Get("auth_settings").([]interface{})
 		authSettingsProperties := expandAppServiceAuthSettings(authSettingsRaw)
 		authSettings := web.SiteAuthSettings{
-			ID:                         utils.String(d.Id()),
+			ID: utils.String(d.Id()),
 			SiteAuthSettingsProperties: &authSettingsProperties,
 		}
 

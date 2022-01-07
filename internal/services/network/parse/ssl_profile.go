@@ -21,7 +21,7 @@ func NewSslProfileID(subscriptionId, resourceGroup, applicationGatewayName, name
 		SubscriptionId:         subscriptionId,
 		ResourceGroup:          resourceGroup,
 		ApplicationGatewayName: applicationGatewayName,
-		Name:                   name,
+		Name: name,
 	}
 }
 

@@ -21,7 +21,7 @@ func NewHttpListenerID(subscriptionId, resourceGroup, applicationGatewayName, na
 		SubscriptionId:         subscriptionId,
 		ResourceGroup:          resourceGroup,
 		ApplicationGatewayName: applicationGatewayName,
-		Name:                   name,
+		Name: name,
 	}
 }
 

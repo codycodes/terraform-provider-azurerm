@@ -29,7 +29,7 @@ func TestSynapseRoleAssignmentID(t *testing.T) {
 			Name:  "synapse Role Assignment ID",
 			Input: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resourceGroup1/providers/Microsoft.Synapse/workspaces/workspace1|00000000",
 			Expected: &RoleAssignmentId{
-				Scope:                 "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resourceGroup1/providers/Microsoft.Synapse/workspaces/workspace1",
+				Scope: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resourceGroup1/providers/Microsoft.Synapse/workspaces/workspace1",
 				DataPlaneAssignmentId: "00000000",
 			},
 		},

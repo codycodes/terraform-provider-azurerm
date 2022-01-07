@@ -243,7 +243,7 @@ func flattenVideoAnalyzerStorageAccounts(input *[]videoanalyzer.StorageAccount) 
 		}
 
 		results = append(results, map[string]interface{}{
-			"id":                        storageAccountId,
+			"id": storageAccountId,
 			"user_assigned_identity_id": userAssignedIdentityId,
 		})
 	}

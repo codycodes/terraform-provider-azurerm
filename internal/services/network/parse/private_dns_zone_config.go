@@ -23,7 +23,7 @@ func NewPrivateDnsZoneConfigID(subscriptionId, resourceGroup, privateEndpointNam
 		ResourceGroup:           resourceGroup,
 		PrivateEndpointName:     privateEndpointName,
 		PrivateDnsZoneGroupName: privateDnsZoneGroupName,
-		Name:                    name,
+		Name: name,
 	}
 }
 

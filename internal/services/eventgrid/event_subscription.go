@@ -974,7 +974,7 @@ func expandEventGridEventSubscriptionEventhubEndpoint(d *pluginsdk.ResourceData)
 	destinationProps.DeliveryAttributeMappings = &deliveryMappings
 
 	return eventgrid.EventHubEventSubscriptionDestination{
-		EndpointType: eventgrid.EndpointTypeEventHub,
+		EndpointType:                                   eventgrid.EndpointTypeEventHub,
 		EventHubEventSubscriptionDestinationProperties: destinationProps,
 	}
 }
@@ -1082,7 +1082,7 @@ func expandEventGridEventSubscriptionWebhookEndpoint(d *pluginsdk.ResourceData) 
 
 	props := eventgrid.WebHookEventSubscriptionDestinationProperties{}
 	webhookDestination := &eventgrid.WebHookEventSubscriptionDestination{
-		EndpointType: eventgrid.EndpointTypeWebHook,
+		EndpointType:                                  eventgrid.EndpointTypeWebHook,
 		WebHookEventSubscriptionDestinationProperties: &props,
 	}
 

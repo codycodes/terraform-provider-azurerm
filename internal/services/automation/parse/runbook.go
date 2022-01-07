@@ -21,7 +21,7 @@ func NewRunbookID(subscriptionId, resourceGroup, automationAccountName, name str
 		SubscriptionId:        subscriptionId,
 		ResourceGroup:         resourceGroup,
 		AutomationAccountName: automationAccountName,
-		Name:                  name,
+		Name: name,
 	}
 }
 

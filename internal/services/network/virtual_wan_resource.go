@@ -128,7 +128,7 @@ func resourceVirtualWanCreateUpdate(d *pluginsdk.ResourceData, meta interface{})
 			DisableVpnEncryption:           utils.Bool(disableVpnEncryption),
 			AllowBranchToBranchTraffic:     utils.Bool(allowBranchToBranchTraffic),
 			Office365LocalBreakoutCategory: network.OfficeTrafficCategory(office365LocalBreakoutCategory),
-			Type:                           utils.String(virtualWanType),
+			Type: utils.String(virtualWanType),
 		},
 	}
 

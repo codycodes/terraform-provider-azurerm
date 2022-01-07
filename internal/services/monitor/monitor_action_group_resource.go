@@ -663,7 +663,7 @@ func expandMonitorActionGroupAzureFunctionReceiver(v []interface{}) *[]insights.
 	for _, receiverValue := range v {
 		val := receiverValue.(map[string]interface{})
 		receiver := insights.AzureFunctionReceiver{
-			Name:                  utils.String(val["name"].(string)),
+			Name: utils.String(val["name"].(string)),
 			FunctionAppResourceID: utils.String(val["function_app_resource_id"].(string)),
 			FunctionName:          utils.String(val["function_name"].(string)),
 			HTTPTriggerURL:        utils.String(val["http_trigger_url"].(string)),

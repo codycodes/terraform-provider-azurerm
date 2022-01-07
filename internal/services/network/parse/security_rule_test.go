@@ -86,7 +86,7 @@ func TestSecurityRuleID(t *testing.T) {
 				SubscriptionId:           "12345678-1234-9876-4563-123456789012",
 				ResourceGroup:            "resGroup1",
 				NetworkSecurityGroupName: "acceptanceTestSecurityGroup1",
-				Name:                     "securityRules1",
+				Name: "securityRules1",
 			},
 		},
 

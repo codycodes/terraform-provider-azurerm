@@ -1179,8 +1179,8 @@ func flattenNetworkConnectionMonitorTCPConfiguration(input *network.ConnectionMo
 
 	return []interface{}{
 		map[string]interface{}{
-			"trace_route_enabled":       enableTraceRoute,
-			"port":                      port,
+			"trace_route_enabled": enableTraceRoute,
+			"port":                port,
 			"destination_port_behavior": string(destinationPortBehavior),
 		},
 	}

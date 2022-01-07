@@ -210,8 +210,8 @@ func resourceDataFactoryDatasetCosmosDbSQLAPICreateUpdate(d *pluginsdk.ResourceD
 	// TODO
 	cosmosDbTableset := datafactory.CosmosDbSQLAPICollectionDataset{
 		CosmosDbSQLAPICollectionDatasetTypeProperties: &cosmosDbDatasetProperties,
-		LinkedServiceName: linkedService,
-		Description:       &description,
+		LinkedServiceName:                             linkedService,
+		Description:                                   &description,
 	}
 
 	if v, ok := d.GetOk("folder"); ok {

@@ -21,7 +21,7 @@ func NewProbeID(subscriptionId, resourceGroup, applicationGatewayName, name stri
 		SubscriptionId:         subscriptionId,
 		ResourceGroup:          resourceGroup,
 		ApplicationGatewayName: applicationGatewayName,
-		Name:                   name,
+		Name: name,
 	}
 }
 

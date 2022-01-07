@@ -21,7 +21,7 @@ func NewExternalEndpointID(subscriptionId, resourceGroup, trafficManagerProfileN
 		SubscriptionId:            subscriptionId,
 		ResourceGroup:             resourceGroup,
 		TrafficManagerProfileName: trafficManagerProfileName,
-		Name:                      name,
+		Name: name,
 	}
 }
 

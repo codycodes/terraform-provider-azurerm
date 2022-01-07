@@ -208,12 +208,12 @@ func resourceNetAppPoolDelete(d *pluginsdk.ResourceData, meta interface{}) error
 	}
 	stateConf := &pluginsdk.StateChangeConf{
 		ContinuousTargetOccurence: 5,
-		Delay:                     10 * time.Second,
-		MinTimeout:                10 * time.Second,
-		Pending:                   []string{"200", "202"},
-		Target:                    []string{"204", "404"},
-		Refresh:                   netappPoolDeleteStateRefreshFunc(ctx, client, *id),
-		Timeout:                   time.Until(deadline),
+		Delay:      10 * time.Second,
+		MinTimeout: 10 * time.Second,
+		Pending:    []string{"200", "202"},
+		Target:     []string{"204", "404"},
+		Refresh:    netappPoolDeleteStateRefreshFunc(ctx, client, *id),
+		Timeout:    time.Until(deadline),
 	}
 
 	if _, err := stateConf.WaitForStateContext(ctx); err != nil {

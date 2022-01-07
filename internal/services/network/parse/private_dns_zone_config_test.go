@@ -99,7 +99,7 @@ func TestPrivateDnsZoneConfigID(t *testing.T) {
 				ResourceGroup:           "resGroup1",
 				PrivateEndpointName:     "endpoint1",
 				PrivateDnsZoneGroupName: "privateDnsZoneGroup1",
-				Name:                    "privateDnsZoneConfig1",
+				Name: "privateDnsZoneConfig1",
 			},
 		},
 

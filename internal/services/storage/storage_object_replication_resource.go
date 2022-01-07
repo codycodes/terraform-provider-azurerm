@@ -342,7 +342,7 @@ func flattenObjectReplicationRules(input *[]storage.ObjectReplicationPolicyRule)
 			"source_container_name":        sourceContainer,
 			"copy_blobs_created_after":     flattenArmObjectReplicationMinCreationTime(minCreationTime),
 			"filter_out_blobs_with_prefix": pluginsdk.NewSet(pluginsdk.HashString, prefix),
-			"name":                         ruleId,
+			"name": ruleId,
 		}
 		results = append(results, v)
 	}

@@ -18,7 +18,7 @@ func LighthouseDefinitionID(id string) (*LighthouseDefinitionId, error) {
 	}
 
 	lighthouseDefinitionId := LighthouseDefinitionId{
-		Scope:                  segments[0],
+		Scope: segments[0],
 		LighthouseDefinitionID: segments[1],
 	}
 

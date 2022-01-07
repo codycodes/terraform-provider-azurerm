@@ -21,7 +21,7 @@ func NewTrustedClientCertificateID(subscriptionId, resourceGroup, applicationGat
 		SubscriptionId:         subscriptionId,
 		ResourceGroup:          resourceGroup,
 		ApplicationGatewayName: applicationGatewayName,
-		Name:                   name,
+		Name: name,
 	}
 }
 

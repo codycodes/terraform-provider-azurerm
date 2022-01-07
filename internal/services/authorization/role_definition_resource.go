@@ -259,12 +259,12 @@ func resourceArmRoleDefinitionUpdate(d *pluginsdk.ResourceData, meta interface{}
 	log.Printf("[DEBUG] Waiting for Role Definition %q (Scope %q) to settle down..", roleDefinitionId.RoleID, roleDefinitionId.Scope)
 	stateConf := &pluginsdk.StateChangeConf{
 		ContinuousTargetOccurence: 12,
-		Delay:                     60 * time.Second,
-		MinTimeout:                10 * time.Second,
-		Pending:                   []string{"Pending"},
-		Target:                    []string{"Updated"},
-		Refresh:                   roleDefinitionEventualConsistencyUpdate(ctx, client, *roleDefinitionId, *updatedOn),
-		Timeout:                   d.Timeout(pluginsdk.TimeoutUpdate),
+		Delay:      60 * time.Second,
+		MinTimeout: 10 * time.Second,
+		Pending:    []string{"Pending"},
+		Target:     []string{"Updated"},
+		Refresh:    roleDefinitionEventualConsistencyUpdate(ctx, client, *roleDefinitionId, *updatedOn),
+		Timeout:    d.Timeout(pluginsdk.TimeoutUpdate),
 	}
 	if _, err := stateConf.WaitForStateContext(ctx); err != nil {
 		return fmt.Errorf("waiting for Role Definition %q (Scope %q) to settle down: %+v", roleDefinitionId.RoleID, roleDefinitionId.Scope, err)

@@ -637,12 +637,12 @@ func waitForVolumeCreation(ctx context.Context, client *netapp.VolumesClient, id
 	}
 	stateConf := &pluginsdk.StateChangeConf{
 		ContinuousTargetOccurence: 5,
-		Delay:                     10 * time.Second,
-		MinTimeout:                10 * time.Second,
-		Pending:                   []string{"204", "404"},
-		Target:                    []string{"200", "202"},
-		Refresh:                   netappVolumeStateRefreshFunc(ctx, client, id),
-		Timeout:                   time.Until(deadline),
+		Delay:      10 * time.Second,
+		MinTimeout: 10 * time.Second,
+		Pending:    []string{"204", "404"},
+		Target:     []string{"200", "202"},
+		Refresh:    netappVolumeStateRefreshFunc(ctx, client, id),
+		Timeout:    time.Until(deadline),
 	}
 
 	if _, err := stateConf.WaitForStateContext(ctx); err != nil {
@@ -659,12 +659,12 @@ func waitForReplAuthorization(ctx context.Context, client *netapp.VolumesClient,
 	}
 	stateConf := &pluginsdk.StateChangeConf{
 		ContinuousTargetOccurence: 5,
-		Delay:                     10 * time.Second,
-		MinTimeout:                10 * time.Second,
-		Pending:                   []string{"204", "404", "400"}, // TODO: Remove 400 when bug is fixed on RP side, where replicationStatus returns 400 at some point during authorization process
-		Target:                    []string{"200", "202"},
-		Refresh:                   netappVolumeReplicationStateRefreshFunc(ctx, client, id),
-		Timeout:                   time.Until(deadline),
+		Delay:      10 * time.Second,
+		MinTimeout: 10 * time.Second,
+		Pending:    []string{"204", "404", "400"}, // TODO: Remove 400 when bug is fixed on RP side, where replicationStatus returns 400 at some point during authorization process
+		Target:     []string{"200", "202"},
+		Refresh:    netappVolumeReplicationStateRefreshFunc(ctx, client, id),
+		Timeout:    time.Until(deadline),
 	}
 
 	if _, err := stateConf.WaitForStateContext(ctx); err != nil {
@@ -681,12 +681,12 @@ func waitForReplMirrorState(ctx context.Context, client *netapp.VolumesClient, i
 	}
 	stateConf := &pluginsdk.StateChangeConf{
 		ContinuousTargetOccurence: 5,
-		Delay:                     10 * time.Second,
-		MinTimeout:                10 * time.Second,
-		Pending:                   []string{"200"}, // 200 means mirror state is still Mirrored
-		Target:                    []string{"204"}, // 204 means mirror state is <> than Mirrored
-		Refresh:                   netappVolumeReplicationMirrorStateRefreshFunc(ctx, client, id, desiredState),
-		Timeout:                   time.Until(deadline),
+		Delay:      10 * time.Second,
+		MinTimeout: 10 * time.Second,
+		Pending:    []string{"200"}, // 200 means mirror state is still Mirrored
+		Target:     []string{"204"}, // 204 means mirror state is <> than Mirrored
+		Refresh:    netappVolumeReplicationMirrorStateRefreshFunc(ctx, client, id, desiredState),
+		Timeout:    time.Until(deadline),
 	}
 
 	if _, err := stateConf.WaitForStateContext(ctx); err != nil {
@@ -704,12 +704,12 @@ func waitForReplicationDeletion(ctx context.Context, client *netapp.VolumesClien
 
 	stateConf := &pluginsdk.StateChangeConf{
 		ContinuousTargetOccurence: 5,
-		Delay:                     10 * time.Second,
-		MinTimeout:                10 * time.Second,
-		Pending:                   []string{"200", "202", "400"}, // TODO: Remove 400 when bug is fixed on RP side, where replicationStatus returns 400 while it is in "Deleting" state
-		Target:                    []string{"404"},
-		Refresh:                   netappVolumeReplicationStateRefreshFunc(ctx, client, id),
-		Timeout:                   time.Until(deadline),
+		Delay:      10 * time.Second,
+		MinTimeout: 10 * time.Second,
+		Pending:    []string{"200", "202", "400"}, // TODO: Remove 400 when bug is fixed on RP side, where replicationStatus returns 400 while it is in "Deleting" state
+		Target:     []string{"404"},
+		Refresh:    netappVolumeReplicationStateRefreshFunc(ctx, client, id),
+		Timeout:    time.Until(deadline),
 	}
 
 	if _, err := stateConf.WaitForStateContext(ctx); err != nil {
@@ -726,12 +726,12 @@ func waitForVolumeDeletion(ctx context.Context, client *netapp.VolumesClient, id
 	}
 	stateConf := &pluginsdk.StateChangeConf{
 		ContinuousTargetOccurence: 5,
-		Delay:                     10 * time.Second,
-		MinTimeout:                10 * time.Second,
-		Pending:                   []string{"200", "202"},
-		Target:                    []string{"204", "404"},
-		Refresh:                   netappVolumeStateRefreshFunc(ctx, client, id),
-		Timeout:                   time.Until(deadline),
+		Delay:      10 * time.Second,
+		MinTimeout: 10 * time.Second,
+		Pending:    []string{"200", "202"},
+		Target:     []string{"204", "404"},
+		Refresh:    netappVolumeStateRefreshFunc(ctx, client, id),
+		Timeout:    time.Until(deadline),
 	}
 
 	if _, err := stateConf.WaitForStateContext(ctx); err != nil {

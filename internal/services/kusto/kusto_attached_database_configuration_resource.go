@@ -171,7 +171,7 @@ func resourceKustoAttachedDatabaseConfigurationCreateUpdate(d *pluginsdk.Resourc
 
 	configurationProperties := expandKustoAttachedDatabaseConfigurationProperties(d)
 	configurationRequest := kusto.AttachedDatabaseConfiguration{
-		Location:                                utils.String(location.Normalize(d.Get("location").(string))),
+		Location: utils.String(location.Normalize(d.Get("location").(string))),
 		AttachedDatabaseConfigurationProperties: configurationProperties,
 	}
 

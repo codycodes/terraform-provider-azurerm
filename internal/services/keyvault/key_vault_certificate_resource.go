@@ -873,10 +873,10 @@ func expandKeyVaultCertificatePolicy(d *pluginsdk.ResourceData) (*keyvault.Certi
 		}
 
 		policy.X509CertificateProperties = &keyvault.X509CertificateProperties{
-			ValidityInMonths:        utils.Int32(int32(cert["validity_in_months"].(int))),
-			Subject:                 utils.String(cert["subject"].(string)),
-			KeyUsage:                &keyUsage,
-			Ekus:                    extendedKeyUsage,
+			ValidityInMonths: utils.Int32(int32(cert["validity_in_months"].(int))),
+			Subject:          utils.String(cert["subject"].(string)),
+			KeyUsage:         &keyUsage,
+			Ekus:             extendedKeyUsage,
 			SubjectAlternativeNames: subjectAlternativeNames,
 		}
 	}

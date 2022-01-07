@@ -219,8 +219,8 @@ func resourceAppServiceCertificateOrderCreateUpdate(d *pluginsdk.ResourceData, m
 
 	certificateOrder := web.AppServiceCertificateOrder{
 		AppServiceCertificateOrderProperties: &properties,
-		Location:                             utils.String(location),
-		Tags:                                 tags.Expand(t),
+		Location: utils.String(location),
+		Tags:     tags.Expand(t),
 	}
 
 	future, err := client.CreateOrUpdate(ctx, resourceGroup, name, certificateOrder)

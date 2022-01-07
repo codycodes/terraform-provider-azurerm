@@ -112,7 +112,7 @@ func TestReplicationProtectedItemID(t *testing.T) {
 				VaultName:                          "vault1",
 				ReplicationFabricName:              "fabric1",
 				ReplicationProtectionContainerName: "container1",
-				Name:                               "item1",
+				Name: "item1",
 			},
 		},
 

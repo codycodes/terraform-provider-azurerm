@@ -317,7 +317,7 @@ func resourceAppServiceSlotUpdate(d *pluginsdk.ResourceData, meta interface{}) e
 		authSettingsRaw := d.Get("auth_settings").([]interface{})
 		authSettingsProperties := expandAppServiceAuthSettings(authSettingsRaw)
 		authSettings := web.SiteAuthSettings{
-			ID:                         utils.String(d.Id()),
+			ID: utils.String(d.Id()),
 			SiteAuthSettingsProperties: &authSettingsProperties,
 		}
 
@@ -347,7 +347,7 @@ func resourceAppServiceSlotUpdate(d *pluginsdk.ResourceData, meta interface{}) e
 	if d.HasChange("logs") || (hasLogs && d.HasChange("app_settings")) {
 		logs := expandAppServiceLogs(d.Get("logs"))
 		logsResource := web.SiteLogsConfig{
-			ID:                       utils.String(d.Id()),
+			ID: utils.String(d.Id()),
 			SiteLogsConfigProperties: &logs,
 		}
 

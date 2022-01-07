@@ -83,9 +83,9 @@ func TestDomainServiceID(t *testing.T) {
 			// valid
 			Input: "/subscriptions/12345678-1234-9876-4563-123456789012/resourceGroups/resGroup1/providers/Microsoft.AAD/domainServices/DomainService1/initialReplicaSetId/replicaSetID",
 			Expected: &DomainServiceId{
-				SubscriptionId:          "12345678-1234-9876-4563-123456789012",
-				ResourceGroup:           "resGroup1",
-				Name:                    "DomainService1",
+				SubscriptionId: "12345678-1234-9876-4563-123456789012",
+				ResourceGroup:  "resGroup1",
+				Name:           "DomainService1",
 				InitialReplicaSetIdName: "replicaSetID",
 			},
 		},

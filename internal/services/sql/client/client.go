@@ -85,7 +85,7 @@ func NewClient(o *common.ClientOptions) *Client {
 	o.ConfigureClient(&serverSecurityAlertPoliciesClient.Client, o.ResourceManagerAuthorizer)
 
 	return &Client{
-		DatabasesClient: &databasesClient,
+		DatabasesClient:                                 &databasesClient,
 		DatabaseExtendedBlobAuditingPoliciesClient:      &databaseExtendedBlobAuditingPoliciesClient,
 		DatabaseThreatDetectionPoliciesClient:           &databaseThreatDetectionPoliciesClient,
 		ElasticPoolsClient:                              &elasticPoolsClient,

@@ -260,7 +260,7 @@ func resourceDataFactoryLinkedServiceAzureSQLDatabaseCreateUpdate(d *pluginsdk.R
 	}
 
 	azureSQLDatabaseLinkedService := &datafactory.AzureSQLDatabaseLinkedService{
-		Description: utils.String(d.Get("description").(string)),
+		Description:                                 utils.String(d.Get("description").(string)),
 		AzureSQLDatabaseLinkedServiceTypeProperties: sqlDatabaseProperties,
 		Type: datafactory.TypeBasicLinkedServiceTypeAzureSQLDatabase,
 	}

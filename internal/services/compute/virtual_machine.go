@@ -83,7 +83,7 @@ func expandVirtualMachineIdentity(input []interface{}) (*compute.VirtualMachineI
 	}
 
 	return &compute.VirtualMachineIdentity{
-		Type:                   compute.ResourceIdentityType(config.Type),
+		Type: compute.ResourceIdentityType(config.Type),
 		UserAssignedIdentities: identityIds,
 	}, nil
 }
@@ -348,10 +348,10 @@ func flattenVirtualMachineOSDisk(ctx context.Context, disksClient *compute.Disks
 	}
 	return []interface{}{
 		map[string]interface{}{
-			"caching":                   string(input.Caching),
-			"disk_size_gb":              diskSizeGb,
-			"diff_disk_settings":        diffDiskSettings,
-			"disk_encryption_set_id":    diskEncryptionSetId,
+			"caching":                string(input.Caching),
+			"disk_size_gb":           diskSizeGb,
+			"diff_disk_settings":     diffDiskSettings,
+			"disk_encryption_set_id": diskEncryptionSetId,
 			"name":                      name,
 			"storage_account_type":      storageAccountType,
 			"write_accelerator_enabled": writeAcceleratorEnabled,

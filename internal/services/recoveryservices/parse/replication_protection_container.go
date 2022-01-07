@@ -23,7 +23,7 @@ func NewReplicationProtectionContainerID(subscriptionId, resourceGroup, vaultNam
 		ResourceGroup:         resourceGroup,
 		VaultName:             vaultName,
 		ReplicationFabricName: replicationFabricName,
-		Name:                  name,
+		Name: name,
 	}
 }
 

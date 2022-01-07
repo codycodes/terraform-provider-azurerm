@@ -99,7 +99,7 @@ func TestManagedPrivateEndpointID(t *testing.T) {
 				ResourceGroup:             "resGroup1",
 				WorkspaceName:             "workspace1",
 				ManagedVirtualNetworkName: "default",
-				Name:                      "endpoint1",
+				Name: "endpoint1",
 			},
 		},
 

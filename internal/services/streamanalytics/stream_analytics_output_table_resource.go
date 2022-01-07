@@ -142,7 +142,7 @@ func (r OutputTableResource) Create() sdk.ResourceFunc {
 				Name: utils.String(model.Name),
 				OutputProperties: &streamanalytics.OutputProperties{
 					Datasource: &streamanalytics.AzureTableOutputDataSource{
-						Type:                                 streamanalytics.TypeMicrosoftStorageTable,
+						Type: streamanalytics.TypeMicrosoftStorageTable,
 						AzureTableOutputDataSourceProperties: tableOutputProps,
 					},
 				},

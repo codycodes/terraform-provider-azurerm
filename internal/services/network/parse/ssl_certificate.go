@@ -21,7 +21,7 @@ func NewSslCertificateID(subscriptionId, resourceGroup, applicationGatewayName, 
 		SubscriptionId:         subscriptionId,
 		ResourceGroup:          resourceGroup,
 		ApplicationGatewayName: applicationGatewayName,
-		Name:                   name,
+		Name: name,
 	}
 }
 

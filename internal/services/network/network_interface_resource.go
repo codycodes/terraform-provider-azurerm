@@ -263,7 +263,7 @@ func resourceNetworkInterfaceCreate(d *pluginsdk.ResourceData, meta interface{})
 		Name:                      utils.String(id.Name),
 		Location:                  utils.String(location),
 		InterfacePropertiesFormat: &properties,
-		Tags:                      tags.Expand(t),
+		Tags: tags.Expand(t),
 	}
 
 	future, err := client.CreateOrUpdate(ctx, id.ResourceGroup, id.Name, iface)
@@ -569,7 +569,7 @@ func expandNetworkInterfaceIPConfigurations(input []interface{}) (*[]network.Int
 
 		name := data["name"].(string)
 		ipConfigs = append(ipConfigs, network.InterfaceIPConfiguration{
-			Name:                                     &name,
+			Name: &name,
 			InterfaceIPConfigurationPropertiesFormat: &properties,
 		})
 	}

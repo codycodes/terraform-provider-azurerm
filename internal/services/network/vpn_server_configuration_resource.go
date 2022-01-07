@@ -487,9 +487,9 @@ func resourceVPNServerConfigurationCreateUpdate(d *pluginsdk.ResourceData, meta 
 	location := azure.NormalizeLocation(d.Get("location").(string))
 	t := d.Get("tags").(map[string]interface{})
 	parameters := network.VpnServerConfiguration{
-		Location:                         utils.String(location),
+		Location: utils.String(location),
 		VpnServerConfigurationProperties: &props,
-		Tags:                             tags.Expand(t),
+		Tags: tags.Expand(t),
 	}
 
 	future, err := client.CreateOrUpdate(ctx, id.ResourceGroup, id.Name, parameters)

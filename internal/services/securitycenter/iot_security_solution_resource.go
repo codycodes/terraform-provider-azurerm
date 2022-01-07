@@ -299,10 +299,10 @@ func resourceIotSecuritySolutionCreateUpdate(d *pluginsdk.ResourceData, meta int
 	solution := security.IoTSecuritySolutionModel{
 		Location: utils.String(location),
 		IoTSecuritySolutionProperties: &security.IoTSecuritySolutionProperties{
-			DisplayName:                  utils.String(d.Get("display_name").(string)),
-			Status:                       status,
-			Export:                       expandIotSecuritySolutionExport(d.Get("events_to_export").(*pluginsdk.Set).List()),
-			IotHubs:                      utils.ExpandStringSlice(d.Get("iothub_ids").(*pluginsdk.Set).List()),
+			DisplayName: utils.String(d.Get("display_name").(string)),
+			Status:      status,
+			Export:      expandIotSecuritySolutionExport(d.Get("events_to_export").(*pluginsdk.Set).List()),
+			IotHubs:     utils.ExpandStringSlice(d.Get("iothub_ids").(*pluginsdk.Set).List()),
 			RecommendationsConfiguration: expandIotSecuritySolutionRecommendation(d.Get("recommendations_enabled").([]interface{})),
 			UnmaskedIPLoggingStatus:      unmaskedIPLoggingStatus,
 		},

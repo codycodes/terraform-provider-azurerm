@@ -266,7 +266,7 @@ func resourceSiteRecoveryReplicatedItemCreate(d *pluginsdk.ResourceData, meta in
 		targetEncryptionDiskSetID := diskInput["target_disk_encryption_set_id"].(string)
 
 		managedDisks = append(managedDisks, siterecovery.A2AVMManagedDiskInputDetails{
-			DiskID:                              &diskId,
+			DiskID: &diskId,
 			PrimaryStagingAzureStorageAccountID: &primaryStagingAzureStorageAccountID,
 			RecoveryResourceGroupID:             &recoveryResourceGroupId,
 			RecoveryReplicaDiskAccountType:      &targetReplicaDiskType,
@@ -362,7 +362,7 @@ func resourceSiteRecoveryReplicatedItemUpdate(d *pluginsdk.ResourceData, meta in
 		targetDiskType := diskInput["target_disk_type"].(string)
 
 		managedDisks = append(managedDisks, siterecovery.A2AVMManagedDiskUpdateDetails{
-			DiskID:                         &diskId,
+			DiskID: &diskId,
 			RecoveryReplicaDiskAccountType: &targetReplicaDiskType,
 			RecoveryTargetDiskAccountType:  &targetDiskType,
 		})
@@ -385,8 +385,8 @@ func resourceSiteRecoveryReplicatedItemUpdate(d *pluginsdk.ResourceData, meta in
 		Properties: &siterecovery.UpdateReplicationProtectedItemInputProperties{
 			RecoveryAzureVMName:            &name,
 			SelectedRecoveryAzureNetworkID: &targetNetworkId,
-			VMNics:                         &vmNics,
-			RecoveryAvailabilitySetID:      targetAvailabilitySetID,
+			VMNics: &vmNics,
+			RecoveryAvailabilitySetID: targetAvailabilitySetID,
 			ProviderSpecificDetails: siterecovery.A2AUpdateReplicationProtectedItemInput{
 				ManagedDiskUpdateDetails: &managedDisks,
 			},

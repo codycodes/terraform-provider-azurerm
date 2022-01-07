@@ -539,12 +539,12 @@ func flattenNetAppVolumeSnapshotPolicyMonthlySchedule(input *netapp.MonthlySched
 func waitForSnapshotPolicyCreation(ctx context.Context, client *netapp.SnapshotPoliciesClient, id parse.SnapshotPolicyId, timeout time.Duration) error {
 	stateConf := &pluginsdk.StateChangeConf{
 		ContinuousTargetOccurence: 5,
-		Delay:                     10 * time.Second,
-		MinTimeout:                10 * time.Second,
-		Pending:                   []string{"204", "404"},
-		Target:                    []string{"200", "202"},
-		Refresh:                   netappSnapshotPolicyStateRefreshFunc(ctx, client, id),
-		Timeout:                   timeout,
+		Delay:      10 * time.Second,
+		MinTimeout: 10 * time.Second,
+		Pending:    []string{"204", "404"},
+		Target:     []string{"200", "202"},
+		Refresh:    netappSnapshotPolicyStateRefreshFunc(ctx, client, id),
+		Timeout:    timeout,
 	}
 
 	if _, err := stateConf.WaitForStateContext(ctx); err != nil {
@@ -557,12 +557,12 @@ func waitForSnapshotPolicyCreation(ctx context.Context, client *netapp.SnapshotP
 func waitForSnapshotPolicyDeletion(ctx context.Context, client *netapp.SnapshotPoliciesClient, id parse.SnapshotPolicyId, timeout time.Duration) error {
 	stateConf := &pluginsdk.StateChangeConf{
 		ContinuousTargetOccurence: 5,
-		Delay:                     10 * time.Second,
-		MinTimeout:                10 * time.Second,
-		Pending:                   []string{"200", "202"},
-		Target:                    []string{"204", "404"},
-		Refresh:                   netappSnapshotPolicyStateRefreshFunc(ctx, client, id),
-		Timeout:                   timeout,
+		Delay:      10 * time.Second,
+		MinTimeout: 10 * time.Second,
+		Pending:    []string{"200", "202"},
+		Target:     []string{"204", "404"},
+		Refresh:    netappSnapshotPolicyStateRefreshFunc(ctx, client, id),
+		Timeout:    timeout,
 	}
 
 	if _, err := stateConf.WaitForStateContext(ctx); err != nil {

@@ -590,7 +590,7 @@ func flattenPolicyOptions(input *[]media.ContentKeyPolicyOption) ([]interface{},
 		}
 
 		results = append(results, map[string]interface{}{
-			"name":                            name,
+			"name": name,
 			"clear_key_configuration_enabled": clearKeyConfigurationEnabled,
 			"playready_configuration_license": playReadyLicense,
 			"widevine_configuration_template": widevineTemplate,
@@ -1026,9 +1026,9 @@ func flattenFairplayConfiguration(input *media.ContentKeyPolicyFairPlayConfigura
 			"rental_duration_seconds":      rentalDuration,
 			"offline_rental_configuration": offlineRentalConfiguration,
 			"rental_and_lease_key_type":    string(input.RentalAndLeaseKeyType),
-			"pfx":                          pfx,
-			"pfx_password":                 pfxPassword,
-			"ask":                          ask,
+			"pfx":          pfx,
+			"pfx_password": pfxPassword,
+			"ask":          ask,
 		},
 	}
 }
@@ -1175,8 +1175,8 @@ func flattenPlayReadyLicenses(input *[]media.ContentKeyPolicyPlayReadyLicense) (
 		}
 
 		results = append(results, map[string]interface{}{
-			"allow_test_devices": allowTestDevices,
-			"begin_date":         beginDate,
+			"allow_test_devices":                       allowTestDevices,
+			"begin_date":                               beginDate,
 			"content_key_location_from_header_enabled": locationFromHeaderEnabled,
 			"content_key_location_from_key_id":         locationFromKeyID,
 			"content_type":                             string(v.ContentType),

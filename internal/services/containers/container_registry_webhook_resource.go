@@ -134,9 +134,9 @@ func resourceContainerRegistryWebhookCreate(d *pluginsdk.ResourceData, meta inte
 	t := d.Get("tags").(map[string]interface{})
 
 	webhook := containerregistry.WebhookCreateParameters{
-		Location:                          &location,
+		Location: &location,
 		WebhookPropertiesCreateParameters: expandWebhookPropertiesCreateParameters(d),
-		Tags:                              tags.Expand(t),
+		Tags: tags.Expand(t),
 	}
 
 	future, err := client.Create(ctx, resourceGroup, registryName, name, webhook)
@@ -178,7 +178,7 @@ func resourceContainerRegistryWebhookUpdate(d *pluginsdk.ResourceData, meta inte
 
 	webhook := containerregistry.WebhookUpdateParameters{
 		WebhookPropertiesUpdateParameters: expandWebhookPropertiesUpdateParameters(d),
-		Tags:                              tags.Expand(t),
+		Tags: tags.Expand(t),
 	}
 
 	future, err := client.Update(ctx, id.ResourceGroup, id.RegistryName, id.Name, webhook)

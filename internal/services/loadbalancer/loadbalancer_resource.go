@@ -298,10 +298,10 @@ func resourceArmLoadBalancerCreateUpdate(d *pluginsdk.ResourceData, meta interfa
 	}
 
 	loadBalancer := network.LoadBalancer{
-		Name:                         utils.String(id.Name),
-		Location:                     utils.String(location),
-		Tags:                         expandedTags,
-		Sku:                          &sku,
+		Name:     utils.String(id.Name),
+		Location: utils.String(location),
+		Tags:     expandedTags,
+		Sku:      &sku,
 		LoadBalancerPropertiesFormat: &properties,
 	}
 
@@ -482,9 +482,9 @@ func expandAzureRmLoadBalancerFrontendIpConfigurations(d *pluginsdk.ResourceData
 			zones = &[]string{}
 		}
 		frontEndConfig := network.FrontendIPConfiguration{
-			Name:                                    &name,
+			Name: &name,
 			FrontendIPConfigurationPropertiesFormat: &properties,
-			Zones:                                   zones,
+			Zones: zones,
 		}
 
 		frontEndConfigs = append(frontEndConfigs, frontEndConfig)

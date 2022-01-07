@@ -189,8 +189,8 @@ func resourceBotChannelsRegistrationCreate(d *pluginsdk.ResourceData, meta inter
 			DeveloperAppInsightKey:            utils.String(d.Get("developer_app_insights_key").(string)),
 			DeveloperAppInsightsAPIKey:        utils.String(d.Get("developer_app_insights_api_key").(string)),
 			DeveloperAppInsightsApplicationID: utils.String(d.Get("developer_app_insights_application_id").(string)),
-			IconURL:                           utils.String(d.Get("icon_url").(string)),
-			IsCmekEnabled:                     utils.Bool(false),
+			IconURL:       utils.String(d.Get("icon_url").(string)),
+			IsCmekEnabled: utils.Bool(false),
 		},
 		Location: utils.String(d.Get("location").(string)),
 		Sku: &botservice.Sku{
@@ -287,9 +287,9 @@ func resourceBotChannelsRegistrationUpdate(d *pluginsdk.ResourceData, meta inter
 			DeveloperAppInsightKey:            utils.String(d.Get("developer_app_insights_key").(string)),
 			DeveloperAppInsightsAPIKey:        utils.String(d.Get("developer_app_insights_api_key").(string)),
 			DeveloperAppInsightsApplicationID: utils.String(d.Get("developer_app_insights_application_id").(string)),
-			IconURL:                           utils.String(d.Get("icon_url").(string)),
-			IsCmekEnabled:                     utils.Bool(false),
-			IsIsolated:                        utils.Bool(d.Get("isolated_network_enabled").(bool)),
+			IconURL:       utils.String(d.Get("icon_url").(string)),
+			IsCmekEnabled: utils.Bool(false),
+			IsIsolated:    utils.Bool(d.Get("isolated_network_enabled").(bool)),
 		},
 		Location: utils.String(d.Get("location").(string)),
 		Sku: &botservice.Sku{

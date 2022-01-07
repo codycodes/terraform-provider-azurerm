@@ -264,7 +264,7 @@ func resourceLogAnalyticsLinkedServiceCreateUpdate(d *pluginsdk.ResourceData, me
 
 	parameters := operationalinsights.LinkedService{
 		LinkedServiceProperties: &operationalinsights.LinkedServiceProperties{},
-		Tags:                    tags.Expand(t),
+		Tags: tags.Expand(t),
 	}
 
 	if id.LinkedServiceName == "Automation" {

@@ -18,9 +18,9 @@ type DomainServiceId struct {
 
 func NewDomainServiceID(subscriptionId, resourceGroup, name, initialReplicaSetIdName string) DomainServiceId {
 	return DomainServiceId{
-		SubscriptionId:          subscriptionId,
-		ResourceGroup:           resourceGroup,
-		Name:                    name,
+		SubscriptionId: subscriptionId,
+		ResourceGroup:  resourceGroup,
+		Name:           name,
 		InitialReplicaSetIdName: initialReplicaSetIdName,
 	}
 }

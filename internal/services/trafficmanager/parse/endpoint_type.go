@@ -33,8 +33,8 @@ func NewEndpointId(subscriptionId, resourceGroup, trafficManagerProfile, endpoin
 		SubscriptionId:            subscriptionId,
 		ResourceGroup:             resourceGroup,
 		TrafficManagerProfileName: trafficManagerProfile,
-		Name:                      name,
-		endpointName:              endpoint,
+		Name:         name,
+		endpointName: endpoint,
 	}, nil
 }
 
@@ -62,8 +62,8 @@ func EndpointID(input string) (*EndpointId, error) {
 			SubscriptionId:            azureEndpoint.SubscriptionId,
 			ResourceGroup:             azureEndpoint.ResourceGroup,
 			TrafficManagerProfileName: azureEndpoint.TrafficManagerProfileName,
-			Name:                      azureEndpoint.Name,
-			endpointName:              "azure",
+			Name:         azureEndpoint.Name,
+			endpointName: "azure",
 		}, nil
 	}
 
@@ -73,8 +73,8 @@ func EndpointID(input string) (*EndpointId, error) {
 			SubscriptionId:            externalEndpoint.SubscriptionId,
 			ResourceGroup:             externalEndpoint.ResourceGroup,
 			TrafficManagerProfileName: externalEndpoint.TrafficManagerProfileName,
-			Name:                      externalEndpoint.Name,
-			endpointName:              "external",
+			Name:         externalEndpoint.Name,
+			endpointName: "external",
 		}, nil
 	}
 
@@ -86,7 +86,7 @@ func EndpointID(input string) (*EndpointId, error) {
 		SubscriptionId:            nestedEndpoint.SubscriptionId,
 		ResourceGroup:             nestedEndpoint.ResourceGroup,
 		TrafficManagerProfileName: nestedEndpoint.TrafficManagerProfileName,
-		Name:                      nestedEndpoint.Name,
-		endpointName:              "nested",
+		Name:         nestedEndpoint.Name,
+		endpointName: "nested",
 	}, nil
 }

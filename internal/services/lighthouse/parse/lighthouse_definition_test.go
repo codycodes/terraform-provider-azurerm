@@ -30,7 +30,7 @@ func TestLighthouseDefinitionID(t *testing.T) {
 			Input: "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.ManagedServices/registrationDefinitions/00000000-0000-0000-0000-000000000000",
 			Expected: &LighthouseDefinitionId{
 				LighthouseDefinitionID: "00000000-0000-0000-0000-000000000000",
-				Scope:                  "/subscriptions/00000000-0000-0000-0000-000000000000",
+				Scope: "/subscriptions/00000000-0000-0000-0000-000000000000",
 			},
 		},
 	}

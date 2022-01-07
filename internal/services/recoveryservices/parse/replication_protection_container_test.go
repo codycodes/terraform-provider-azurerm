@@ -99,7 +99,7 @@ func TestReplicationProtectionContainerID(t *testing.T) {
 				ResourceGroup:         "group1",
 				VaultName:             "vault1",
 				ReplicationFabricName: "fabric1",
-				Name:                  "container1",
+				Name: "container1",
 			},
 		},
 

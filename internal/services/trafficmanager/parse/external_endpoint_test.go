@@ -86,7 +86,7 @@ func TestExternalEndpointID(t *testing.T) {
 				SubscriptionId:            "12345678-1234-9876-4563-123456789012",
 				ResourceGroup:             "resGroup1",
 				TrafficManagerProfileName: "trafficManagerProfile1",
-				Name:                      "externalEndpoint1",
+				Name: "externalEndpoint1",
 			},
 		},
 

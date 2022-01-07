@@ -107,11 +107,11 @@ func TestReplicationProtectionContainerMappingsID(t *testing.T) {
 			// valid
 			Input: "/subscriptions/12345678-1234-9876-4563-123456789012/resourceGroups/group1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/fabric1/replicationProtectionContainers/container1/replicationProtectionContainerMappings/mapping1",
 			Expected: &ReplicationProtectionContainerMappingsId{
-				SubscriptionId:                     "12345678-1234-9876-4563-123456789012",
-				ResourceGroup:                      "group1",
-				VaultName:                          "vault1",
-				ReplicationFabricName:              "fabric1",
-				ReplicationProtectionContainerName: "container1",
+				SubscriptionId:                            "12345678-1234-9876-4563-123456789012",
+				ResourceGroup:                             "group1",
+				VaultName:                                 "vault1",
+				ReplicationFabricName:                     "fabric1",
+				ReplicationProtectionContainerName:        "container1",
 				ReplicationProtectionContainerMappingName: "mapping1",
 			},
 		},

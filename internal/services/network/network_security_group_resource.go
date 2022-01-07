@@ -395,7 +395,7 @@ func expandAzureRmSecurityRules(d *pluginsdk.ResourceData) ([]network.SecurityRu
 		}
 
 		rules = append(rules, network.SecurityRule{
-			Name:                         &name,
+			Name: &name,
 			SecurityRulePropertiesFormat: &properties,
 		})
 	}

@@ -28,6 +28,6 @@ func MaintenanceAssignmentVirtualMachineScaleSetID(input string) (*MaintenanceAs
 	return &MaintenanceAssignmentVirtualMachineScaleSetId{
 		VirtualMachineScaleSetId:    virtualMachineScaleSetId,
 		VirtualMachineScaleSetIdRaw: targetResourceId,
-		Name:                        name,
+		Name: name,
 	}, nil
 }

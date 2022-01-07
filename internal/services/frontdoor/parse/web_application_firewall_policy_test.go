@@ -71,8 +71,8 @@ func TestWebApplicationFirewallPolicyID(t *testing.T) {
 			// valid
 			Input: "/subscriptions/12345678-1234-9876-4563-123456789012/resourceGroups/resGroup1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1",
 			Expected: &WebApplicationFirewallPolicyId{
-				SubscriptionId: "12345678-1234-9876-4563-123456789012",
-				ResourceGroup:  "resGroup1",
+				SubscriptionId:                            "12345678-1234-9876-4563-123456789012",
+				ResourceGroup:                             "resGroup1",
 				FrontDoorWebApplicationFirewallPolicyName: "policy1",
 			},
 		},
@@ -164,8 +164,8 @@ func TestWebApplicationFirewallPolicyIDInsensitively(t *testing.T) {
 			// valid
 			Input: "/subscriptions/12345678-1234-9876-4563-123456789012/resourceGroups/resGroup1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1",
 			Expected: &WebApplicationFirewallPolicyId{
-				SubscriptionId: "12345678-1234-9876-4563-123456789012",
-				ResourceGroup:  "resGroup1",
+				SubscriptionId:                            "12345678-1234-9876-4563-123456789012",
+				ResourceGroup:                             "resGroup1",
 				FrontDoorWebApplicationFirewallPolicyName: "policy1",
 			},
 		},
@@ -174,8 +174,8 @@ func TestWebApplicationFirewallPolicyIDInsensitively(t *testing.T) {
 			// lower-cased segment names
 			Input: "/subscriptions/12345678-1234-9876-4563-123456789012/resourceGroups/resGroup1/providers/Microsoft.Network/frontdoorwebapplicationfirewallpolicies/policy1",
 			Expected: &WebApplicationFirewallPolicyId{
-				SubscriptionId: "12345678-1234-9876-4563-123456789012",
-				ResourceGroup:  "resGroup1",
+				SubscriptionId:                            "12345678-1234-9876-4563-123456789012",
+				ResourceGroup:                             "resGroup1",
 				FrontDoorWebApplicationFirewallPolicyName: "policy1",
 			},
 		},
@@ -184,8 +184,8 @@ func TestWebApplicationFirewallPolicyIDInsensitively(t *testing.T) {
 			// upper-cased segment names
 			Input: "/subscriptions/12345678-1234-9876-4563-123456789012/resourceGroups/resGroup1/providers/Microsoft.Network/FRONTDOORWEBAPPLICATIONFIREWALLPOLICIES/policy1",
 			Expected: &WebApplicationFirewallPolicyId{
-				SubscriptionId: "12345678-1234-9876-4563-123456789012",
-				ResourceGroup:  "resGroup1",
+				SubscriptionId:                            "12345678-1234-9876-4563-123456789012",
+				ResourceGroup:                             "resGroup1",
 				FrontDoorWebApplicationFirewallPolicyName: "policy1",
 			},
 		},
@@ -194,8 +194,8 @@ func TestWebApplicationFirewallPolicyIDInsensitively(t *testing.T) {
 			// mixed-cased segment names
 			Input: "/subscriptions/12345678-1234-9876-4563-123456789012/resourceGroups/resGroup1/providers/Microsoft.Network/FrOnTdOoRwEbApPlIcAtIoNfIrEwAlLpOlIcIeS/policy1",
 			Expected: &WebApplicationFirewallPolicyId{
-				SubscriptionId: "12345678-1234-9876-4563-123456789012",
-				ResourceGroup:  "resGroup1",
+				SubscriptionId:                            "12345678-1234-9876-4563-123456789012",
+				ResourceGroup:                             "resGroup1",
 				FrontDoorWebApplicationFirewallPolicyName: "policy1",
 			},
 		},

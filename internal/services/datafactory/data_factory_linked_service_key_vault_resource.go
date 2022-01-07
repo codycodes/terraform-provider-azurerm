@@ -167,7 +167,7 @@ func resourceDataFactoryLinkedServiceKeyVaultCreateUpdate(d *pluginsdk.ResourceD
 	azureKeyVaultLinkedService := &datafactory.AzureKeyVaultLinkedService{
 		Description:                              utils.String(d.Get("description").(string)),
 		AzureKeyVaultLinkedServiceTypeProperties: azureKeyVaultProperties,
-		Type:                                     datafactory.TypeBasicLinkedServiceTypeAzureKeyVault,
+		Type: datafactory.TypeBasicLinkedServiceTypeAzureKeyVault,
 	}
 
 	if v, ok := d.GetOk("parameters"); ok {

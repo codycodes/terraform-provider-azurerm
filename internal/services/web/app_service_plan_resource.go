@@ -176,10 +176,10 @@ func resourceAppServicePlanCreateUpdate(d *pluginsdk.ResourceData, meta interfac
 	}
 
 	appServicePlan := web.AppServicePlan{
-		Location:                 &location,
-		Kind:                     &kind,
-		Sku:                      &sku,
-		Tags:                     tags.Expand(t),
+		Location: &location,
+		Kind:     &kind,
+		Sku:      &sku,
+		Tags:     tags.Expand(t),
 		AppServicePlanProperties: properties,
 	}
 

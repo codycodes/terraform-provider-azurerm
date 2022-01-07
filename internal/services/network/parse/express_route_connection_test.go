@@ -86,7 +86,7 @@ func TestExpressRouteConnectionID(t *testing.T) {
 				SubscriptionId:          "12345678-1234-9876-4563-123456789012",
 				ResourceGroup:           "resGroup1",
 				ExpressRouteGatewayName: "ergw1",
-				Name:                    "erConnection1",
+				Name: "erConnection1",
 			},
 		},
 

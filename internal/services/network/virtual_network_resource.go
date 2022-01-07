@@ -189,7 +189,7 @@ func resourceVirtualNetworkCreateUpdate(d *pluginsdk.ResourceData, meta interfac
 		Name:                           utils.String(id.Name),
 		Location:                       utils.String(location),
 		VirtualNetworkPropertiesFormat: vnetProperties,
-		Tags:                           tags.Expand(t),
+		Tags: tags.Expand(t),
 	}
 
 	if v, ok := d.GetOk("flow_timeout_in_minutes"); ok {

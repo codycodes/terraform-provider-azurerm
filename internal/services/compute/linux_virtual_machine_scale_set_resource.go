@@ -405,7 +405,7 @@ func resourceLinuxVirtualMachineScaleSetCreate(d *pluginsdk.ResourceData, meta i
 
 	priority := compute.VirtualMachinePriorityTypes(d.Get("priority").(string))
 	upgradePolicy := compute.UpgradePolicy{
-		Mode:                     upgradeMode,
+		Mode: upgradeMode,
 		AutomaticOSUpgradePolicy: automaticOSUpgradePolicy,
 		RollingUpgradePolicy:     rollingUpgradePolicy,
 	}

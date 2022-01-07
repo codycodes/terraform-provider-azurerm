@@ -21,7 +21,7 @@ func NewScheduleID(subscriptionId, resourceGroup, automationAccountName, name st
 		SubscriptionId:        subscriptionId,
 		ResourceGroup:         resourceGroup,
 		AutomationAccountName: automationAccountName,
-		Name:                  name,
+		Name: name,
 	}
 }
 

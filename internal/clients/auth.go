@@ -32,10 +32,10 @@ func NewResourceManagerAccount(ctx context.Context, config authentication.Config
 
 	account := ResourceManagerAccount{
 		AuthenticatedAsAServicePrincipal: config.AuthenticatedAsAServicePrincipal,
-		ClientId:                         config.ClientID,
-		Environment:                      env,
-		ObjectId:                         objectId,
-		TenantId:                         config.TenantID,
+		ClientId:    config.ClientID,
+		Environment: env,
+		ObjectId:    objectId,
+		TenantId:    config.TenantID,
 		SkipResourceProviderRegistration: skipResourceProviderRegistration,
 		SubscriptionId:                   config.SubscriptionID,
 	}

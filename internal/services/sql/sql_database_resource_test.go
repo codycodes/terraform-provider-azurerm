@@ -118,7 +118,7 @@ func TestAccSqlDatabase_restorePointInTime(t *testing.T) {
 
 	data.ResourceTest(t, r, []acceptance.TestStep{
 		{
-			Config:                    r.basic(data),
+			Config: r.basic(data),
 			PreventPostDestroyRefresh: true,
 			Check: acceptance.ComposeTestCheckFunc(
 				check.That(data.ResourceName).ExistsInAzure(r),

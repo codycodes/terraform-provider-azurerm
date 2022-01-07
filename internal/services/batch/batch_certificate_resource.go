@@ -142,7 +142,7 @@ func resourceBatchCertificateCreate(d *pluginsdk.ResourceData, meta interface{})
 		certificateProperties.Password = &password
 	}
 	parameters := batch.CertificateCreateOrUpdateParameters{
-		Name:                                &name,
+		Name: &name,
 		CertificateCreateOrUpdateProperties: &certificateProperties,
 	}
 

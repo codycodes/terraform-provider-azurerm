@@ -200,7 +200,7 @@ func resourceLogAnalyticsWorkspaceCreateUpdate(d *pluginsdk.ResourceData, meta i
 		Location: &location,
 		Tags:     tags.Expand(t),
 		WorkspaceProperties: &operationalinsights.WorkspaceProperties{
-			Sku:                             sku,
+			Sku: sku,
 			PublicNetworkAccessForIngestion: internetIngestionEnabled,
 			PublicNetworkAccessForQuery:     internetQueryEnabled,
 			RetentionInDays:                 &retentionInDays,

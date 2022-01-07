@@ -320,7 +320,7 @@ func resourceFunctionAppSlotCreate(d *pluginsdk.ResourceData, meta interface{}) 
 	authSettings := expandAppServiceAuthSettings(authSettingsRaw)
 
 	auth := web.SiteAuthSettings{
-		ID:                         read.ID,
+		ID: read.ID,
 		SiteAuthSettingsProperties: &authSettings,
 	}
 
@@ -436,7 +436,7 @@ func resourceFunctionAppSlotUpdate(d *pluginsdk.ResourceData, meta interface{}) 
 		authSettingsRaw := d.Get("auth_settings").([]interface{})
 		authSettingsProperties := expandAppServiceAuthSettings(authSettingsRaw)
 		authSettings := web.SiteAuthSettings{
-			ID:                         utils.String(d.Id()),
+			ID: utils.String(d.Id()),
 			SiteAuthSettingsProperties: &authSettingsProperties,
 		}
 

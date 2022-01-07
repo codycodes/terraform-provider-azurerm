@@ -903,12 +903,12 @@ func resourceVirtualMachineScaleSetCreateUpdate(d *pluginsdk.ResourceData, meta 
 	}
 
 	properties := compute.VirtualMachineScaleSet{
-		Name:                             &name,
-		Location:                         &location,
-		Tags:                             tags.Expand(t),
-		Sku:                              sku,
+		Name:     &name,
+		Location: &location,
+		Tags:     tags.Expand(t),
+		Sku:      sku,
 		VirtualMachineScaleSetProperties: &scaleSetProps,
-		Zones:                            zones,
+		Zones: zones,
 	}
 
 	if _, ok := d.GetOk("identity"); ok {

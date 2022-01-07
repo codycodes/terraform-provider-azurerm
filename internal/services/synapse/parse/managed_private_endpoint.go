@@ -23,7 +23,7 @@ func NewManagedPrivateEndpointID(subscriptionId, resourceGroup, workspaceName, m
 		ResourceGroup:             resourceGroup,
 		WorkspaceName:             workspaceName,
 		ManagedVirtualNetworkName: managedVirtualNetworkName,
-		Name:                      name,
+		Name: name,
 	}
 }
 

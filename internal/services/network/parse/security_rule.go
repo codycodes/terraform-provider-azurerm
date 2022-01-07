@@ -21,7 +21,7 @@ func NewSecurityRuleID(subscriptionId, resourceGroup, networkSecurityGroupName, 
 		SubscriptionId:           subscriptionId,
 		ResourceGroup:            resourceGroup,
 		NetworkSecurityGroupName: networkSecurityGroupName,
-		Name:                     name,
+		Name: name,
 	}
 }
 

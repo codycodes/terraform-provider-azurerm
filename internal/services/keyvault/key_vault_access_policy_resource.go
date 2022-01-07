@@ -231,10 +231,10 @@ func resourceKeyVaultAccessPolicyCreateOrDelete(d *pluginsdk.ResourceData, meta 
 		return fmt.Errorf("updating Access Policy (Object ID %q / Application ID %q) for Key Vault %q (Resource Group %q): %+v", objectId, applicationIdRaw, vaultName, resourceGroup, err)
 	}
 	stateConf := &pluginsdk.StateChangeConf{
-		Pending:                   []string{"notfound", "vaultnotfound"},
-		Target:                    []string{"found"},
-		Refresh:                   accessPolicyRefreshFunc(ctx, client, resourceGroup, vaultName, objectId, applicationIdRaw),
-		Delay:                     5 * time.Second,
+		Pending: []string{"notfound", "vaultnotfound"},
+		Target:  []string{"found"},
+		Refresh: accessPolicyRefreshFunc(ctx, client, resourceGroup, vaultName, objectId, applicationIdRaw),
+		Delay:   5 * time.Second,
 		ContinuousTargetOccurence: 3,
 		Timeout:                   d.Timeout(pluginsdk.TimeoutCreate),
 	}

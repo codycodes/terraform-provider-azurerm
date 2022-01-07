@@ -21,7 +21,7 @@ func NewAzureEndpointID(subscriptionId, resourceGroup, trafficManagerProfileName
 		SubscriptionId:            subscriptionId,
 		ResourceGroup:             resourceGroup,
 		TrafficManagerProfileName: trafficManagerProfileName,
-		Name:                      name,
+		Name: name,
 	}
 }
 

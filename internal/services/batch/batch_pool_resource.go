@@ -1029,7 +1029,7 @@ func expandBatchPoolIdentity(input []interface{}) (*batch.PoolIdentity, error) {
 	}
 
 	return &batch.PoolIdentity{
-		Type:                   batch.PoolIdentityType(config.Type),
+		Type: batch.PoolIdentityType(config.Type),
 		UserAssignedIdentities: identityMaps,
 	}, nil
 }
@@ -1051,7 +1051,7 @@ func flattenBatchPoolIdentity(input *batch.PoolIdentity) ([]interface{}, error) 
 	}
 
 	config = &identity.ExpandedConfig{
-		Type:                    identity.Type(string(input.Type)),
+		Type: identity.Type(string(input.Type)),
 		UserAssignedIdentityIds: identityIds,
 	}
 	return batchPoolIdentity{}.Flatten(config), nil

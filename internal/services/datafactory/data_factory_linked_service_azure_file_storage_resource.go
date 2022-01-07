@@ -213,7 +213,7 @@ func resourceDataFactoryLinkedServiceAzureFileStorageCreateUpdate(d *pluginsdk.R
 	}
 
 	fileStorageLinkedService := &datafactory.AzureFileStorageLinkedService{
-		Description: utils.String(d.Get("description").(string)),
+		Description:                                 utils.String(d.Get("description").(string)),
 		AzureFileStorageLinkedServiceTypeProperties: fileStorageProperties,
 		Type: datafactory.TypeBasicLinkedServiceTypeAzureFileStorage,
 	}

@@ -202,7 +202,7 @@ func resourceDataFactoryLinkedServiceCosmosDbCreateUpdate(d *pluginsdk.ResourceD
 	cosmosdbLinkedService := &datafactory.CosmosDbLinkedService{
 		Description:                         &description,
 		CosmosDbLinkedServiceTypeProperties: cosmosdbProperties,
-		Type:                                datafactory.TypeBasicLinkedServiceTypeCosmosDb,
+		Type: datafactory.TypeBasicLinkedServiceTypeCosmosDb,
 	}
 
 	if v, ok := d.GetOk("parameters"); ok {

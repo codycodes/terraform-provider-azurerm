@@ -356,7 +356,7 @@ func resourceAppServiceCreate(d *pluginsdk.ResourceData, meta interface{}) error
 	authSettings := expandAppServiceAuthSettings(authSettingsRaw)
 
 	auth := web.SiteAuthSettings{
-		ID:                         read.ID,
+		ID: read.ID,
 		SiteAuthSettingsProperties: &authSettings,
 	}
 
@@ -367,7 +367,7 @@ func resourceAppServiceCreate(d *pluginsdk.ResourceData, meta interface{}) error
 	logsConfig := expandAppServiceLogs(d.Get("logs"))
 
 	logs := web.SiteLogsConfig{
-		ID:                       read.ID,
+		ID: read.ID,
 		SiteLogsConfigProperties: &logsConfig,
 	}
 
@@ -477,7 +477,7 @@ func resourceAppServiceUpdate(d *pluginsdk.ResourceData, meta interface{}) error
 		authSettingsRaw := d.Get("auth_settings").([]interface{})
 		authSettingsProperties := expandAppServiceAuthSettings(authSettingsRaw)
 		authSettings := web.SiteAuthSettings{
-			ID:                         utils.String(d.Id()),
+			ID: utils.String(d.Id()),
 			SiteAuthSettingsProperties: &authSettingsProperties,
 		}
 
@@ -558,7 +558,7 @@ func resourceAppServiceUpdate(d *pluginsdk.ResourceData, meta interface{}) error
 	if d.HasChange("logs") || (hasLogs && d.HasChange("app_settings")) {
 		logs := expandAppServiceLogs(d.Get("logs"))
 		logsResource := web.SiteLogsConfig{
-			ID:                       utils.String(d.Id()),
+			ID: utils.String(d.Id()),
 			SiteLogsConfigProperties: &logs,
 		}
 

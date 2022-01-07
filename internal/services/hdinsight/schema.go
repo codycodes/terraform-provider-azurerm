@@ -701,7 +701,7 @@ func ExpandHDInsightsStorageAccounts(storageAccounts []interface{}, gen2storageA
 
 		if clusterIndentity == nil {
 			clusterIndentity = &hdinsight.ClusterIdentity{
-				Type:                   hdinsight.ResourceIdentityTypeUserAssigned,
+				Type: hdinsight.ResourceIdentityTypeUserAssigned,
 				UserAssignedIdentities: make(map[string]*hdinsight.ClusterIdentityUserAssignedIdentitiesValue),
 			}
 		}

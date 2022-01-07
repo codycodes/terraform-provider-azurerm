@@ -295,7 +295,7 @@ func expandAzureRmLoadBalancerProbe(d *pluginsdk.ResourceData) *network.Probe {
 	}
 
 	return &network.Probe{
-		Name:                  utils.String(d.Get("name").(string)),
+		Name: utils.String(d.Get("name").(string)),
 		ProbePropertiesFormat: &properties,
 	}
 }

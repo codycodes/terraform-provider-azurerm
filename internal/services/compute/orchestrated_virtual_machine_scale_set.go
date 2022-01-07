@@ -1518,7 +1518,7 @@ func flattenOrchestratedVirtualMachineScaleSetExtensions(input *compute.VirtualM
 		}
 
 		result = append(result, map[string]interface{}{
-			"name":                               name,
+			"name": name,
 			"auto_upgrade_minor_version_enabled": autoUpgradeMinorVersion,
 			// "automatic_upgrade_enabled":  enableAutomaticUpgrade,
 			"force_extension_execution_on_change":       forceUpdateTag,
@@ -1842,9 +1842,9 @@ func FlattenOrchestratedVirtualMachineScaleSetDataDisk(input *[]compute.VirtualM
 		}
 
 		output = append(output, map[string]interface{}{
-			"caching":                   string(v.Caching),
-			"create_option":             string(v.CreateOption),
-			"lun":                       lun,
+			"caching":       string(v.Caching),
+			"create_option": string(v.CreateOption),
+			"lun":           lun,
 			"disk_encryption_set_id":    diskEncryptionSetId,
 			"disk_size_gb":              diskSizeGb,
 			"storage_account_type":      storageAccountType,

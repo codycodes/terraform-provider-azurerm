@@ -454,7 +454,7 @@ func expandAzureRmLoadBalancerRule(d *pluginsdk.ResourceData, lb *network.LoadBa
 	}
 
 	return &network.LoadBalancingRule{
-		Name:                              utils.String(d.Get("name").(string)),
+		Name: utils.String(d.Get("name").(string)),
 		LoadBalancingRulePropertiesFormat: &properties,
 	}, nil
 }

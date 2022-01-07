@@ -265,7 +265,7 @@ func resourceHDInsightKafkaClusterCreate(d *pluginsdk.ResourceData, meta interfa
 		params.Properties.SecurityProfile = ExpandHDInsightSecurityProfile(v.([]interface{}))
 
 		params.Identity = &hdinsight.ClusterIdentity{
-			Type:                   hdinsight.ResourceIdentityTypeUserAssigned,
+			Type: hdinsight.ResourceIdentityTypeUserAssigned,
 			UserAssignedIdentities: make(map[string]*hdinsight.ClusterIdentityUserAssignedIdentitiesValue),
 		}
 

@@ -2065,7 +2065,7 @@ func expandStorageAccountVirtualNetworks(networkRule map[string]interface{}) *[]
 		attrs := virtualNetworkConfig.(string)
 		virtualNetwork := storage.VirtualNetworkRule{
 			VirtualNetworkResourceID: utils.String(attrs),
-			Action:                   storage.ActionAllow,
+			Action: storage.ActionAllow,
 		}
 		virtualNetworks[i] = virtualNetwork
 	}

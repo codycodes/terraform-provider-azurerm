@@ -21,7 +21,7 @@ func NewCertificateID(subscriptionId, resourceGroup, automationAccountName, name
 		SubscriptionId:        subscriptionId,
 		ResourceGroup:         resourceGroup,
 		AutomationAccountName: automationAccountName,
-		Name:                  name,
+		Name: name,
 	}
 }
 

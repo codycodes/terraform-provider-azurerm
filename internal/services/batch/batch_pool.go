@@ -742,9 +742,9 @@ func flattenBatchPoolNetworkConfiguration(input *batch.NetworkConfiguration) []i
 			}
 
 			endpointConfigs = append(endpointConfigs, map[string]interface{}{
-				"backend_port":                 backendPort,
-				"frontend_port_range":          frontendPortRange,
-				"name":                         name,
+				"backend_port":        backendPort,
+				"frontend_port_range": frontendPortRange,
+				"name":                name,
 				"network_security_group_rules": networkSecurities,
 				"protocol":                     string(inboundNatPool.Protocol),
 			})

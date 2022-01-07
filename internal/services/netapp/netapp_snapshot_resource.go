@@ -192,12 +192,12 @@ func resourceNetAppSnapshotDelete(d *pluginsdk.ResourceData, meta interface{}) e
 	log.Printf("[DEBUG] Waiting for NetApp Snapshot %q (Resource Group %q) to be deleted", id.Name, id.ResourceGroup)
 	stateConf := &pluginsdk.StateChangeConf{
 		ContinuousTargetOccurence: 5,
-		Delay:                     10 * time.Second,
-		MinTimeout:                10 * time.Second,
-		Pending:                   []string{"200", "202"},
-		Target:                    []string{"204", "404"},
-		Refresh:                   netappSnapshotDeleteStateRefreshFunc(ctx, client, id.ResourceGroup, id.NetAppAccountName, id.CapacityPoolName, id.VolumeName, id.Name),
-		Timeout:                   d.Timeout(pluginsdk.TimeoutDelete),
+		Delay:      10 * time.Second,
+		MinTimeout: 10 * time.Second,
+		Pending:    []string{"200", "202"},
+		Target:     []string{"204", "404"},
+		Refresh:    netappSnapshotDeleteStateRefreshFunc(ctx, client, id.ResourceGroup, id.NetAppAccountName, id.CapacityPoolName, id.VolumeName, id.Name),
+		Timeout:    d.Timeout(pluginsdk.TimeoutDelete),
 	}
 
 	if _, err := stateConf.WaitForStateContext(ctx); err != nil {

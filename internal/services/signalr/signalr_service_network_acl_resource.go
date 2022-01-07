@@ -438,7 +438,7 @@ func flattenSignalRServicePrivateEndpoint(input *[]signalr.PrivateEndpointACL, p
 				deny := utils.FlattenStringSlice(&deniedRequestTypes)
 
 				results = append(results, map[string]interface{}{
-					"id":                    *props.PrivateEndpoint.Id,
+					"id": *props.PrivateEndpoint.Id,
 					"allowed_request_types": allow,
 					"denied_request_types":  deny,
 				})

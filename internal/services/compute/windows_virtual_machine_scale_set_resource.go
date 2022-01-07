@@ -428,7 +428,7 @@ func resourceWindowsVirtualMachineScaleSetCreate(d *pluginsdk.ResourceData, meta
 
 	priority := compute.VirtualMachinePriorityTypes(d.Get("priority").(string))
 	upgradePolicy := compute.UpgradePolicy{
-		Mode:                     upgradeMode,
+		Mode: upgradeMode,
 		AutomaticOSUpgradePolicy: automaticOSUpgradePolicy,
 		RollingUpgradePolicy:     rollingUpgradePolicy,
 	}

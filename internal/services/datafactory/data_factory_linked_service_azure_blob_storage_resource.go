@@ -256,7 +256,7 @@ func resourceDataFactoryLinkedServiceBlobStorageCreateUpdate(d *pluginsdk.Resour
 	}
 
 	blobStorageLinkedService := &datafactory.AzureBlobStorageLinkedService{
-		Description: utils.String(d.Get("description").(string)),
+		Description:                                 utils.String(d.Get("description").(string)),
 		AzureBlobStorageLinkedServiceTypeProperties: blobStorageProperties,
 		Type: datafactory.TypeBasicLinkedServiceTypeAzureBlobStorage,
 	}

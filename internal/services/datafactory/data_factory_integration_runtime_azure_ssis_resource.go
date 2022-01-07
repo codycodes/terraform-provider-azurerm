@@ -635,9 +635,9 @@ func expandDataFactoryIntegrationRuntimeAzureSsisComputeProperties(d *pluginsdk.
 
 func expandDataFactoryIntegrationRuntimeAzureSsisProperties(d *pluginsdk.ResourceData) *datafactory.IntegrationRuntimeSsisProperties {
 	ssisProperties := &datafactory.IntegrationRuntimeSsisProperties{
-		LicenseType:                  datafactory.IntegrationRuntimeLicenseType(d.Get("license_type").(string)),
-		DataProxyProperties:          expandDataFactoryIntegrationRuntimeAzureSsisProxy(d.Get("proxy").([]interface{})),
-		Edition:                      datafactory.IntegrationRuntimeEdition(d.Get("edition").(string)),
+		LicenseType:         datafactory.IntegrationRuntimeLicenseType(d.Get("license_type").(string)),
+		DataProxyProperties: expandDataFactoryIntegrationRuntimeAzureSsisProxy(d.Get("proxy").([]interface{})),
+		Edition:             datafactory.IntegrationRuntimeEdition(d.Get("edition").(string)),
 		ExpressCustomSetupProperties: expandDataFactoryIntegrationRuntimeAzureSsisExpressCustomSetUp(d.Get("express_custom_setup").([]interface{})),
 		PackageStores:                expandDataFactoryIntegrationRuntimeAzureSsisPackageStore(d.Get("package_store").([]interface{})),
 	}
@@ -899,7 +899,7 @@ func flattenDataFactoryIntegrationRuntimeAzureSsisProxy(input *datafactory.Integ
 	}
 	return []interface{}{
 		map[string]interface{}{
-			"path":                                 path,
+			"path": path,
 			"self_hosted_integration_runtime_name": selfHostedIntegrationRuntimeName,
 			"staging_storage_linked_service_name":  stagingStorageLinkedServiceName,
 		},

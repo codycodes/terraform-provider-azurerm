@@ -693,7 +693,7 @@ func expandSqlVirtualMachineAutoPatchingSettings(input []interface{}) *sqlvirtua
 	autoPatchingSetting := input[0].(map[string]interface{})
 
 	return &sqlvirtualmachine.AutoPatchingSettings{
-		Enable:                        utils.Bool(true),
+		Enable: utils.Bool(true),
 		MaintenanceWindowDuration:     utils.Int32(int32(autoPatchingSetting["maintenance_window_duration_in_minutes"].(int))),
 		MaintenanceWindowStartingHour: utils.Int32(int32(autoPatchingSetting["maintenance_window_starting_hour"].(int))),
 		DayOfWeek:                     sqlvirtualmachine.DayOfWeek(autoPatchingSetting["day_of_week"].(string)),

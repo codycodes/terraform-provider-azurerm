@@ -588,7 +588,7 @@ func expandApiManagementOAuth2AuthenticationSettingsContract(input []interface{}
 	oAuth2AuthorizationV := input[0].(map[string]interface{})
 	return &apimanagement.OAuth2AuthenticationSettingsContract{
 		AuthorizationServerID: utils.String(oAuth2AuthorizationV["authorization_server_name"].(string)),
-		Scope:                 utils.String(oAuth2AuthorizationV["scope"].(string)),
+		Scope: utils.String(oAuth2AuthorizationV["scope"].(string)),
 	}
 }
 

@@ -20,11 +20,11 @@ type ReplicationProtectionContainerMappingsId struct {
 
 func NewReplicationProtectionContainerMappingsID(subscriptionId, resourceGroup, vaultName, replicationFabricName, replicationProtectionContainerName, replicationProtectionContainerMappingName string) ReplicationProtectionContainerMappingsId {
 	return ReplicationProtectionContainerMappingsId{
-		SubscriptionId:                     subscriptionId,
-		ResourceGroup:                      resourceGroup,
-		VaultName:                          vaultName,
-		ReplicationFabricName:              replicationFabricName,
-		ReplicationProtectionContainerName: replicationProtectionContainerName,
+		SubscriptionId:                            subscriptionId,
+		ResourceGroup:                             resourceGroup,
+		VaultName:                                 vaultName,
+		ReplicationFabricName:                     replicationFabricName,
+		ReplicationProtectionContainerName:        replicationProtectionContainerName,
 		ReplicationProtectionContainerMappingName: replicationProtectionContainerMappingName,
 	}
 }

@@ -240,7 +240,7 @@ func resourceSubnetCreate(d *pluginsdk.ResourceData, meta interface{}) error {
 	properties.Delegations = expandSubnetDelegation(delegationsRaw)
 
 	subnet := network.Subnet{
-		Name:                   utils.String(id.Name),
+		Name: utils.String(id.Name),
 		SubnetPropertiesFormat: &properties,
 	}
 
@@ -359,7 +359,7 @@ func resourceSubnetUpdate(d *pluginsdk.ResourceData, meta interface{}) error {
 	}
 
 	subnet := network.Subnet{
-		Name:                   utils.String(id.Name),
+		Name: utils.String(id.Name),
 		SubnetPropertiesFormat: &props,
 	}
 

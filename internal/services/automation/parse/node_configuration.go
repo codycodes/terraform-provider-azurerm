@@ -21,7 +21,7 @@ func NewNodeConfigurationID(subscriptionId, resourceGroup, automationAccountName
 		SubscriptionId:        subscriptionId,
 		ResourceGroup:         resourceGroup,
 		AutomationAccountName: automationAccountName,
-		Name:                  name,
+		Name: name,
 	}
 }
 

@@ -16,7 +16,7 @@ type RoleAssignmentId struct {
 
 func NewRoleAssignmentId(scope string, dataPlaneAssignmentId string) RoleAssignmentId {
 	return RoleAssignmentId{
-		Scope:                 scope,
+		Scope: scope,
 		DataPlaneAssignmentId: dataPlaneAssignmentId,
 	}
 }
@@ -32,7 +32,7 @@ func RoleAssignmentID(input string) (*RoleAssignmentId, error) {
 	}
 
 	return &RoleAssignmentId{
-		Scope:                 segments[0],
+		Scope: segments[0],
 		DataPlaneAssignmentId: segments[1],
 	}, nil
 }

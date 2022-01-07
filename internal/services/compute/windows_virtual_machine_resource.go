@@ -441,7 +441,7 @@ func resourceWindowsVirtualMachineCreate(d *pluginsdk.ResourceData, meta interfa
 				WindowsConfiguration: &compute.WindowsConfiguration{
 					ProvisionVMAgent:       utils.Bool(provisionVMAgent),
 					EnableAutomaticUpdates: utils.Bool(enableAutomaticUpdates),
-					WinRM:                  winRmListeners,
+					WinRM: winRmListeners,
 				},
 				Secrets: secrets,
 			},

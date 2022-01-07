@@ -21,7 +21,7 @@ func NewExpressRouteConnectionID(subscriptionId, resourceGroup, expressRouteGate
 		SubscriptionId:          subscriptionId,
 		ResourceGroup:           resourceGroup,
 		ExpressRouteGatewayName: expressRouteGatewayName,
-		Name:                    name,
+		Name: name,
 	}
 }
 

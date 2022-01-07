@@ -21,7 +21,7 @@ func NewAuthenticationCertificateID(subscriptionId, resourceGroup, applicationGa
 		SubscriptionId:         subscriptionId,
 		ResourceGroup:          resourceGroup,
 		ApplicationGatewayName: applicationGatewayName,
-		Name:                   name,
+		Name: name,
 	}
 }
 

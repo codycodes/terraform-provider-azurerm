@@ -99,7 +99,7 @@ func TestManagedPrivateEndpointID(t *testing.T) {
 				ResourceGroup:             "resGroup1",
 				FactoryName:               "factory1",
 				ManagedVirtualNetworkName: "vnet1",
-				Name:                      "endpoint1",
+				Name: "endpoint1",
 			},
 		},
 

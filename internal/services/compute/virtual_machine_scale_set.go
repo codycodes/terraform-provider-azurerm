@@ -1041,9 +1041,9 @@ func FlattenVirtualMachineScaleSetDataDisk(input *[]compute.VirtualMachineScaleS
 		}
 
 		output = append(output, map[string]interface{}{
-			"caching":                   string(v.Caching),
-			"create_option":             string(v.CreateOption),
-			"lun":                       lun,
+			"caching":       string(v.Caching),
+			"create_option": string(v.CreateOption),
+			"lun":           lun,
 			"disk_encryption_set_id":    diskEncryptionSetId,
 			"disk_size_gb":              diskSizeGb,
 			"storage_account_type":      storageAccountType,
@@ -1748,7 +1748,7 @@ func flattenVirtualMachineScaleSetExtensions(input *compute.VirtualMachineScaleS
 		}
 
 		result = append(result, map[string]interface{}{
-			"name":                       name,
+			"name": name,
 			"auto_upgrade_minor_version": autoUpgradeMinorVersion,
 			"automatic_upgrade_enabled":  enableAutomaticUpgrade,
 			"force_update_tag":           forceUpdateTag,

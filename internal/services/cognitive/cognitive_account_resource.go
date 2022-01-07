@@ -708,7 +708,7 @@ func expandCognitiveAccountNetworkAcls(d *pluginsdk.ResourceData) (*cognitiveser
 			subnetId := value["subnet_id"].(string)
 			subnetIds = append(subnetIds, subnetId)
 			rule := cognitiveservicesaccounts.VirtualNetworkRule{
-				Id:                               subnetId,
+				Id: subnetId,
 				IgnoreMissingVnetServiceEndpoint: utils.Bool(value["ignore_missing_vnet_service_endpoint"].(bool)),
 			}
 			networkRules = append(networkRules, rule)

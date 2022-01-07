@@ -590,10 +590,10 @@ func flattenCommonEncryptionCenc(input *media.CommonEncryptionCenc) []interface{
 
 	return []interface{}{
 		map[string]interface{}{
-			"enabled_protocols": enabledProtocols,
+			"enabled_protocols":                                    enabledProtocols,
 			"drm_widevine_custom_license_acquisition_url_template": widevineTemplate,
-			"drm_playready":       drmPlayReady,
-			"default_content_key": defaultContentKey,
+			"drm_playready":                                        drmPlayReady,
+			"default_content_key":                                  defaultContentKey,
 		},
 	}
 }

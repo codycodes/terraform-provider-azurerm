@@ -513,7 +513,7 @@ func flattenKubernetesAddOnProfiles(profile map[string]*containerservice.Managed
 		}
 
 		httpApplicationRoutes = append(httpApplicationRoutes, map[string]interface{}{
-			"enabled":                            enabled,
+			"enabled": enabled,
 			"http_application_routing_zone_name": zoneName,
 		})
 	}

@@ -680,19 +680,19 @@ func resourceCosmosDbAccountCreate(d *pluginsdk.ResourceData, meta interface{}) 
 		Kind:     documentdb.DatabaseAccountKind(kind),
 		Identity: expandCosmosdbAccountIdentity(d.Get("identity").([]interface{})),
 		DatabaseAccountCreateUpdateProperties: &documentdb.DatabaseAccountCreateUpdateProperties{
-			DatabaseAccountOfferType:           utils.String(offerType),
-			IPRules:                            common.CosmosDBIpRangeFilterToIpRules(ipRangeFilter),
-			IsVirtualNetworkFilterEnabled:      utils.Bool(isVirtualNetworkFilterEnabled),
-			EnableFreeTier:                     utils.Bool(enableFreeTier),
-			EnableAutomaticFailover:            utils.Bool(enableAutomaticFailover),
-			ConsistencyPolicy:                  expandAzureRmCosmosDBAccountConsistencyPolicy(d),
-			Locations:                          &geoLocations,
-			Capabilities:                       expandAzureRmCosmosDBAccountCapabilities(d),
-			VirtualNetworkRules:                expandAzureRmCosmosDBAccountVirtualNetworkRules(d),
-			EnableMultipleWriteLocations:       utils.Bool(enableMultipleWriteLocations),
-			PublicNetworkAccess:                publicNetworkAccess,
-			EnableAnalyticalStorage:            utils.Bool(enableAnalyticalStorage),
-			Cors:                               common.ExpandCosmosCorsRule(d.Get("cors_rule").([]interface{})),
+			DatabaseAccountOfferType: utils.String(offerType),
+			IPRules:                  common.CosmosDBIpRangeFilterToIpRules(ipRangeFilter),
+			IsVirtualNetworkFilterEnabled: utils.Bool(isVirtualNetworkFilterEnabled),
+			EnableFreeTier:                utils.Bool(enableFreeTier),
+			EnableAutomaticFailover:       utils.Bool(enableAutomaticFailover),
+			ConsistencyPolicy:             expandAzureRmCosmosDBAccountConsistencyPolicy(d),
+			Locations:                     &geoLocations,
+			Capabilities:                  expandAzureRmCosmosDBAccountCapabilities(d),
+			VirtualNetworkRules:           expandAzureRmCosmosDBAccountVirtualNetworkRules(d),
+			EnableMultipleWriteLocations:  utils.Bool(enableMultipleWriteLocations),
+			PublicNetworkAccess:           publicNetworkAccess,
+			EnableAnalyticalStorage:       utils.Bool(enableAnalyticalStorage),
+			Cors: common.ExpandCosmosCorsRule(d.Get("cors_rule").([]interface{})),
 			DisableKeyBasedMetadataWriteAccess: utils.Bool(!d.Get("access_key_metadata_writes_enabled").(bool)),
 			NetworkACLBypass:                   networkByPass,
 			NetworkACLBypassResourceIds:        utils.ExpandStringSlice(d.Get("network_acl_bypass_ids").([]interface{})),
@@ -835,19 +835,19 @@ func resourceCosmosDbAccountUpdate(d *pluginsdk.ResourceData, meta interface{}) 
 		Kind:     documentdb.DatabaseAccountKind(kind),
 		Identity: expandCosmosdbAccountIdentity(d.Get("identity").([]interface{})),
 		DatabaseAccountCreateUpdateProperties: &documentdb.DatabaseAccountCreateUpdateProperties{
-			DatabaseAccountOfferType:           utils.String(offerType),
-			IPRules:                            common.CosmosDBIpRangeFilterToIpRules(ipRangeFilter),
-			IsVirtualNetworkFilterEnabled:      utils.Bool(isVirtualNetworkFilterEnabled),
-			EnableFreeTier:                     utils.Bool(enableFreeTier),
-			EnableAutomaticFailover:            utils.Bool(enableAutomaticFailover),
-			Capabilities:                       expandAzureRmCosmosDBAccountCapabilities(d),
-			ConsistencyPolicy:                  expandAzureRmCosmosDBAccountConsistencyPolicy(d),
-			Locations:                          &oldLocations,
-			VirtualNetworkRules:                expandAzureRmCosmosDBAccountVirtualNetworkRules(d),
-			EnableMultipleWriteLocations:       resp.EnableMultipleWriteLocations,
-			PublicNetworkAccess:                publicNetworkAccess,
-			EnableAnalyticalStorage:            utils.Bool(enableAnalyticalStorage),
-			Cors:                               common.ExpandCosmosCorsRule(d.Get("cors_rule").([]interface{})),
+			DatabaseAccountOfferType: utils.String(offerType),
+			IPRules:                  common.CosmosDBIpRangeFilterToIpRules(ipRangeFilter),
+			IsVirtualNetworkFilterEnabled: utils.Bool(isVirtualNetworkFilterEnabled),
+			EnableFreeTier:                utils.Bool(enableFreeTier),
+			EnableAutomaticFailover:       utils.Bool(enableAutomaticFailover),
+			Capabilities:                  expandAzureRmCosmosDBAccountCapabilities(d),
+			ConsistencyPolicy:             expandAzureRmCosmosDBAccountConsistencyPolicy(d),
+			Locations:                     &oldLocations,
+			VirtualNetworkRules:           expandAzureRmCosmosDBAccountVirtualNetworkRules(d),
+			EnableMultipleWriteLocations:  resp.EnableMultipleWriteLocations,
+			PublicNetworkAccess:           publicNetworkAccess,
+			EnableAnalyticalStorage:       utils.Bool(enableAnalyticalStorage),
+			Cors: common.ExpandCosmosCorsRule(d.Get("cors_rule").([]interface{})),
 			DisableKeyBasedMetadataWriteAccess: utils.Bool(!d.Get("access_key_metadata_writes_enabled").(bool)),
 			NetworkACLBypass:                   networkByPass,
 			NetworkACLBypassResourceIds:        utils.ExpandStringSlice(d.Get("network_acl_bypass_ids").([]interface{})),
@@ -1347,7 +1347,7 @@ func expandAzureRmCosmosDBAccountVirtualNetworkRules(d *pluginsdk.ResourceData) 
 	for i, r := range virtualNetworkRules {
 		m := r.(map[string]interface{})
 		s[i] = documentdb.VirtualNetworkRule{
-			ID:                               utils.String(m["id"].(string)),
+			ID: utils.String(m["id"].(string)),
 			IgnoreMissingVNetServiceEndpoint: utils.Bool(m["ignore_missing_vnet_service_endpoint"].(bool)),
 		}
 	}
@@ -1441,7 +1441,7 @@ func flattenAzureRmCosmosDBAccountVirtualNetworkRules(rules *[]documentdb.Virtua
 	if rules != nil {
 		for _, r := range *rules {
 			rule := map[string]interface{}{
-				"id":                                   *r.ID,
+				"id": *r.ID,
 				"ignore_missing_vnet_service_endpoint": *r.IgnoreMissingVNetServiceEndpoint,
 			}
 			results.Add(rule)

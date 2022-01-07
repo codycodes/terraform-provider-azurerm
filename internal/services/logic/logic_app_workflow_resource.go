@@ -871,7 +871,7 @@ func expandLogicAppWorkflowIdentity(input []interface{}) (*logic.ManagedServiceI
 	}
 
 	return &logic.ManagedServiceIdentity{
-		Type:                   logic.ManagedServiceIdentityType(config.Type),
+		Type: logic.ManagedServiceIdentityType(config.Type),
 		UserAssignedIdentities: identityIds,
 	}, nil
 }

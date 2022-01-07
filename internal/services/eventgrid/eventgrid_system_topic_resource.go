@@ -115,7 +115,7 @@ func resourceEventGridSystemTopicCreateUpdate(d *pluginsdk.ResourceData, meta in
 	systemTopic := eventgrid.SystemTopic{
 		Location:              &location,
 		SystemTopicProperties: systemTopicProperties,
-		Tags:                  tags.Expand(t),
+		Tags: tags.Expand(t),
 	}
 
 	if v, ok := d.GetOk("identity"); ok {

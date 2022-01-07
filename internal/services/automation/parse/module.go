@@ -21,7 +21,7 @@ func NewModuleID(subscriptionId, resourceGroup, automationAccountName, name stri
 		SubscriptionId:        subscriptionId,
 		ResourceGroup:         resourceGroup,
 		AutomationAccountName: automationAccountName,
-		Name:                  name,
+		Name: name,
 	}
 }
 

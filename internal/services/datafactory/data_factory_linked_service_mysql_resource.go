@@ -163,7 +163,7 @@ func resourceDataFactoryLinkedServiceMySQLCreateUpdate(d *pluginsdk.ResourceData
 	mysqlLinkedService := &datafactory.MySQLLinkedService{
 		Description:                      &description,
 		MySQLLinkedServiceTypeProperties: mysqlProperties,
-		Type:                             datafactory.TypeBasicLinkedServiceTypeMySQL,
+		Type: datafactory.TypeBasicLinkedServiceTypeMySQL,
 	}
 
 	if v, ok := d.GetOk("parameters"); ok {

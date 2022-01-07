@@ -21,7 +21,7 @@ func NewBackendAddressPoolID(subscriptionId, resourceGroup, applicationGatewayNa
 		SubscriptionId:         subscriptionId,
 		ResourceGroup:          resourceGroup,
 		ApplicationGatewayName: applicationGatewayName,
-		Name:                   name,
+		Name: name,
 	}
 }
 
